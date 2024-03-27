@@ -1,0 +1,6 @@
+robot_controllers
+/home/icore_base/csc7135_project/devel/.private/robot_controllers/cmake.lock /home/icore_base/csc7135_project/devel/./cmake.lock
+/home/icore_base/csc7135_project/devel/.private/robot_controllers/lib/librobot_controllers.so /home/icore_base/csc7135_project/devel/lib/librobot_controllers.so
+/home/icore_base/csc7135_project/devel/.private/robot_controllers/lib/pkgconfig/robot_controllers.pc /home/icore_base/csc7135_project/devel/lib/pkgconfig/robot_controllers.pc
+/home/icore_base/csc7135_project/devel/.private/robot_controllers/share/robot_controllers/cmake/robot_controllersConfig.cmake /home/icore_base/csc7135_project/devel/share/robot_controllers/cmake/robot_controllersConfig.cmake
+/home/icore_base/csc7135_project/devel/.private/robot_controllers/share/robot_controllers/cmake/robot_controllersConfig-version.cmake /home/icore_base/csc7135_project/devel/share/robot_controllers/cmake/robot_controllersConfig-version.cmake
