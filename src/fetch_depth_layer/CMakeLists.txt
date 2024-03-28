@@ -14,7 +14,8 @@ find_package(catkin REQUIRED
     nav_msgs
 )
 
-find_package(OpenCV 3.2 REQUIRED)
+# find_package(OpenCV 3.2 REQUIRED) # Ubuntu 18.04
+find_package(OpenCV 4.2 REQUIRED) # Ubuntu 20.04
 
 catkin_package(
   INCLUDE_DIRS
