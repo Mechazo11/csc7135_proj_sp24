@@ -18,5 +18,10 @@
 
 * Install simple_grasping module ```sudo apt install ros-noetic-simple-grasping```
 
+* Install teleop-twist-keyboard ```sudo apt-get install ros-noetic-teleop-twist-keyboard```
+
+## Experiment Setup
+* Instructions on how to run such experiments are setup here
+
 ## TODO
 * Add them here
