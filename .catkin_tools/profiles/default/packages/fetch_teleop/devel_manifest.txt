@@ -1,0 +1,6 @@
+fetch_teleop
+/home/icore_base/csc7135_project/devel/.private/fetch_teleop/cmake.lock /home/icore_base/csc7135_project/devel/./cmake.lock
+/home/icore_base/csc7135_project/devel/.private/fetch_teleop/lib/pkgconfig/fetch_teleop.pc /home/icore_base/csc7135_project/devel/lib/pkgconfig/fetch_teleop.pc
+/home/icore_base/csc7135_project/devel/.private/fetch_teleop/lib/fetch_teleop/joystick_teleop /home/icore_base/csc7135_project/devel/lib/fetch_teleop/joystick_teleop
+/home/icore_base/csc7135_project/devel/.private/fetch_teleop/share/fetch_teleop/cmake/fetch_teleopConfig.cmake /home/icore_base/csc7135_project/devel/share/fetch_teleop/cmake/fetch_teleopConfig.cmake
+/home/icore_base/csc7135_project/devel/.private/fetch_teleop/share/fetch_teleop/cmake/fetch_teleopConfig-version.cmake /home/icore_base/csc7135_project/devel/share/fetch_teleop/cmake/fetch_teleopConfig-version.cmake
