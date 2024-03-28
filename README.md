@@ -3,6 +3,9 @@
 ## Changes from ROS Melodic build
 * Changed all relevevant .py script's top-level shebang to ```#!/usr/bin/env python3```
 
+## Tutorials/Useful references
+* [Fetch official tutorial for gazebo](https://docs.fetchrobotics.com/gazebo.html)
+
 ## Preamble
 
 * Ensure ```PYTHONPATH``` is set to the location where all packages are installed for Python 3.8 (default in Ubuntu 20.04) and address the bug from ```setuptools ```
