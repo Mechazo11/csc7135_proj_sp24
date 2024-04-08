@@ -8,10 +8,19 @@
 
 ## Preamble
 
-* Ensure ```PYTHONPATH``` is set to the location where all packages are installed for Python 3.8 (default in Ubuntu 20.04) and address the bug from ```setuptools ```
+### Solve the issue with ```PYTHONPATH``` and ```setuptools ```
 
-* Add these line to your .bashrc file
-```export PYTHONPATH="/usr/lib/python3/dist-packages:$PYTHONPATH"```
+Follow these steps
+* Open a File exlorer, go to ```Home```
+* Hit ```Ctrl+H``` to allow viewing hidden files
+* Open ```.bashrc```
+* Scroll down to the very bottom and copy these lines
+```
+export PYTHONPATH="/usr/lib/python3/dist-packages:$PYTHONPATH"
+export SETUPTOOLS_USE_DISTUTILS=stdlib
+```
+
+### Install dependencies before building catkin
 
 * Intall geometry2 module ```sudo apt install ros-noetic-geometry2*```
 
