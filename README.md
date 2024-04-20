@@ -27,4 +27,6 @@
 * Instructions on how to run such experiments are setup here
 
 ## TODO
-* Add them here
+- [ ] Create a .yml file that will enable interface to ROSDiscover code for testing
+
+- [x] Add a print statement on the very top of cli.py to test if we can indeed change file
