@@ -30,3 +30,6 @@
 - [ ] Create a .yml file that will enable interface to ROSDiscover code for testing
 
 - [x] Add a print statement on the very top of cli.py to test if we can indeed change file
+
+## Resources
+* Replication package: ```https://zenodo.org/records/5834633```
