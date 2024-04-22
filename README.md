@@ -23,6 +23,12 @@
 
 * Install teleop-twist-keyboard ```sudo apt-get install ros-noetic-teleop-twist-keyboard```
 
+## Setting up ROSDiscover and ROSWire
+* git clone ROSDiscover
+* cd into ```rosdiscover``` and then git clone ```roswire```
+* Install ```rosdiscover``` and then cd into ```roswire``` and install it
+* Test installation ```rosdiscover --help```
+
 ## Experiment Setup
 * Instructions on how to run such experiments are setup here
 
