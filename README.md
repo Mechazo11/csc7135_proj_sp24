@@ -30,11 +30,13 @@
 * Test installation ```rosdiscover --help```
 
 ## Creating a Docker image of the workspace
-* TODO write each step clearly
+* Build ```test1``` docker image: ```docker image build -t test1 ~/csc7135_project/docker_files/```
+
+* Test run this image: ```docker run -it test1```
 
 * Useful links
     - https://medium.com/@sepideh.92sh/how-docker-revolutionizes-application-development-a-comprehensive-guide-for-beginners-fc2d3e53eb31
-    
+
 
 ## Experiment Setup
 * Instructions on how to run such experiments are setup here
