@@ -33,9 +33,21 @@
 * Instructions on how to run such experiments are setup here
 
 ## TODO
-- [ ] Create a .yml file that will enable interface to ROSDiscover code for testing
 
-- [x] Add a print statement on the very top of cli.py to test if we can indeed change file
+- [x] Correctly install ```ROSDiscover``` and ```ROSWire```
+
+- [x] Port ```fetch-gazebo``` and ```fetch``` into ROS Noetic
+
+- [ ] Learn how to convert a catkin_ws to Docker image
+
+- [ ] 
+
+- [ ] Test if ```rosdiscover``` launch works with the created Docker
+
+- [ ] Check if arm hits itself, moveit can send collision node
+
+- [ ] Create a python package that will move the arm through a motion to hit itself
+
 
 ## Resources
 * Replication package: ```https://zenodo.org/records/5834633```
