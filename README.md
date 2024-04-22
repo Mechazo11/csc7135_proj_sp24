@@ -29,6 +29,13 @@
 * Install ```rosdiscover``` and then cd into ```roswire``` and install it
 * Test installation ```rosdiscover --help```
 
+## Creating a Docker image of the workspace
+* TODO write each step clearly
+
+* Useful links
+    - https://medium.com/@sepideh.92sh/how-docker-revolutionizes-application-development-a-comprehensive-guide-for-beginners-fc2d3e53eb31
+    
+
 ## Experiment Setup
 * Instructions on how to run such experiments are setup here
 
@@ -39,8 +46,6 @@
 - [x] Port ```fetch-gazebo``` and ```fetch``` into ROS Noetic
 
 - [ ] Learn how to convert a catkin_ws to Docker image
-
-- [ ] 
 
 - [ ] Test if ```rosdiscover``` launch works with the created Docker
 
