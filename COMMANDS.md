@@ -9,10 +9,11 @@ This file contains all the commands required to running this project
 ```echo $ROS_DISTRO```
 
 #### ROSDiscover commands
-```cd ~/Documents/rosdiscover/``` 
+* In a terminal move into the rosdiscover directory ```cd ~/Documents/rosdiscover/``` 
 
-Activate the environment ```. /home/icore_base/.local/share/virtualenvs/rosdiscover-aYG4O-1F/bin/activate```
+* Activate the environment ```. /home/icore_base/.local/share/virtualenvs/rosdiscover-aYG4O-1F/bin/activate```
 
+* Test ROSDiscover launch emulation
 
 #### Testing node in Fetch robot
 * Launch the playground for pick-and-place simulation

@@ -33,6 +33,8 @@
 * Navigate to the workspace: ```cd ~/csc735_project/```
 * Build ```test1``` docker image: ```docker image build -t test1 .```
 
+* Remove a docker image: ```TODO```
+
 * Test run this image: ```docker run -it test1```
 
 * Useful links
@@ -48,7 +50,7 @@
 
 - [x] Port ```fetch-gazebo``` and ```fetch``` into ROS Noetic
 
-- [ ] Learn how to convert a catkin_ws to Docker image
+- [x] Learn how to convert a catkin_ws to Docker image
 
 - [ ] Test if ```rosdiscover``` launch works with the created Docker
 
