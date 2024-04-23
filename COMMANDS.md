@@ -8,22 +8,22 @@ This file contains all the commands required to running this project
 * Check version of ROS running
 ```echo $ROS_DISTRO```
 
-#### ROSDiscover commands
-* In a terminal move into the rosdiscover directory ```cd ~/Documents/rosdiscover/``` 
+#### Testing the docker image
+* Test run this image: ```docker run -it test1```
 
-* Activate the environment ```. /home/icore_base/.local/share/virtualenvs/rosdiscover-aYG4O-1F/bin/activate```
-
-* Test ROSDiscover launch emulation
-
-#### Testing node in Fetch robot
+#### Testing Fetch robot
 * Launch the playground for pick-and-place simulation
 ```roslaunch fetch_gazebo pickplace_playground.launch```
 
 * Launch the pick and place demo
 ```roslaunch fetch_gazebo_demo pick_place_demo.launch```
 
-* Activate ROSDiscover env
+
+#### Experiment
+* In a terminal move into the rosdiscover directory ```cd ~/Documents/rosdiscover/``` 
+
+* Activate the environment ```. /home/icore_base/.local/share/virtualenvs/rosdiscover-aYG4O-1F/bin/activate```
 
 
-* Test 1: Test ROSDiscover call signature
-```rosdiscover launch example/csc_7135/fetch.yml```
+* Test 1: Test ROSDiscover launch
+```rosdiscover launch /home/icore_base/csc7135_project/rosdiscover_yml/fetch.yml```
