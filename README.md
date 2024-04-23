@@ -30,7 +30,8 @@
 * Test installation ```rosdiscover --help```
 
 ## Creating a Docker image of the workspace
-* Build ```test1``` docker image: ```docker image build -t test1 ~/csc7135_project/docker_files/```
+* Navigate to the workspace: ```cd ~/csc735_project/```
+* Build ```test1``` docker image: ```docker image build -t test1 .```
 
 * Test run this image: ```docker run -it test1```
 

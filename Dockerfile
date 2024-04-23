@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y nano \
 RUN mkdir -p /home/ros_ws/src
 
 # Copy the src directory from host machine
-COPY /home/icore_base/csc7135_project/src /home/ros_ws/src
+COPY ./src /home/ros_ws/src
 
 # Set the working diretory
 WORKDIR /home/ros_ws
