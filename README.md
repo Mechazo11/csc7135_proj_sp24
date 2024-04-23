@@ -32,8 +32,41 @@ export SETUPTOOLS_USE_DISTUTILS=stdlib
 
 * Install teleop-twist-keyboard ```sudo apt-get install ros-noetic-teleop-twist-keyboard```
 
+## Setting up ROSDiscover and ROSWire
+* git clone ROSDiscover
+* cd into ```rosdiscover``` and then git clone ```roswire```
+* Install ```rosdiscover``` and then cd into ```roswire``` and install it
+* Test installation ```rosdiscover --help```
+
+## Creating a Docker image of the workspace
+* Navigate to the workspace: ```cd ~/csc735_project/```
+* Build ```test1``` docker image: ```docker image build -t test1 .```
+
+* Remove a docker image: ```TODO```
+
+* Test run this image: ```docker run -it test1```
+
+* Useful links
+    - https://medium.com/@sepideh.92sh/how-docker-revolutionizes-application-development-a-comprehensive-guide-for-beginners-fc2d3e53eb31
+
+
 ## Experiment Setup
 * Instructions on how to run such experiments are setup here
 
 ## TODO
-* Add them here
+
+- [x] Correctly install ```ROSDiscover``` and ```ROSWire```
+
+- [x] Port ```fetch-gazebo``` and ```fetch``` into ROS Noetic
+
+- [x] Learn how to convert a catkin_ws to Docker image
+
+- [ ] Test if ```rosdiscover``` launch works with the created Docker
+
+- [ ] Check if arm hits itself, moveit can send collision node
+
+- [ ] Create a python package that will move the arm through a motion to hit itself
+
+
+## Resources
+* Replication package: ```https://zenodo.org/records/5834633```
