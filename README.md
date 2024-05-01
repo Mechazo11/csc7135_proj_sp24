@@ -55,7 +55,11 @@ export SETUPTOOLS_USE_DISTUTILS=stdlib
 
 ## TODO
 
-- [ ] Create a C++ package that has no architectural bug
+- [ ] Create a C++ package with launch file
+
+- [ ] Write down the steps to replicate ```RQ2``` in ROSDiscover paper
+
+- [ ] Create and test the experiments.yml file for ```fetch_lsu```
 
 - [x] Correctly install ```ROSDiscover``` and ```ROSWire```
 
@@ -67,10 +71,12 @@ export SETUPTOOLS_USE_DISTUTILS=stdlib
 
 - [x] Check if we can understand the pipeline to get architecture read using rosdiscover
 
-- [ ] Write down the steps to replicate ```RQ2``` in ROSDiscover paper
-
 - [x] Figure out how to launch Fetch with just is arm and no head. Not possible.s
 
 
-## Resources
-* Replication package: ```https://zenodo.org/records/5834633```
+## Resources / References
+1. Replication [package](https://zenodo.org/records/5834633)
+
+2. Create ROS 1 C++ packages with [catkin tools](https://catkin-tools.readthedocs.io/en/latest/quick_start.html)
+
+3. Create launch file [within the package](https://automaticaddison.com/how-to-create-a-launch-file-in-ros-noetic/) 

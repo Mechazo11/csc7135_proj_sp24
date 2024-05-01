@@ -8,6 +8,12 @@ This file contains all the commands required to running this project
 * Check version of ROS running
 ```echo $ROS_DISTRO```
 
+### Create C++ project with ```catkin create```
+* in ws/src run this command: ```catkin create pkg your_package_name --catkin-deps roscpp```
+
+* ```cd ~/csc7135_project/src```
+* ```catkin create pkg csc7135_pkg1 --catkin-deps roscpp std_msgs```
+
 #### Testing the docker image
 * Test run this image: ```docker run -it test1```
 
