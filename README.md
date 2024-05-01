@@ -61,11 +61,11 @@ export SETUPTOOLS_USE_DISTUTILS=stdlib
 
 - [x] Learn how to convert a catkin_ws to Docker image
 
-- [ ] Test if ```rosdiscover``` launch works with the created Docker
+- [x] Test if ```rosdiscover``` launch works with the created Docker
 
-- [ ] Check if arm hits itself, moveit can send collision node
+- [ ] Create a C++ package that we can use to demonstrate something from ROSDiscover
 
-- [ ] Create a python package that will move the arm through a motion to hit itself
+- [ ] Figure out how to launch Fetch with just is arm and no head
 
 
 ## Resources
