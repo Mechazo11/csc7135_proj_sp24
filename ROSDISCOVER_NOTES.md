@@ -12,3 +12,5 @@ The main error we will try to replicate is
 
 - Step 1: Derive the ground truth by observing the running system
 ```pipenv run scripts/observe-system.py fetch_lsu```
+
+#! RESUME FROM HERE
