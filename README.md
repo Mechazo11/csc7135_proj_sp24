@@ -55,6 +55,8 @@ export SETUPTOOLS_USE_DISTUTILS=stdlib
 
 ## TODO
 
+- [ ] Create a C++ package that has no architectural bug
+
 - [x] Correctly install ```ROSDiscover``` and ```ROSWire```
 
 - [x] Port ```fetch-gazebo``` and ```fetch``` into ROS Noetic
@@ -63,9 +65,11 @@ export SETUPTOOLS_USE_DISTUTILS=stdlib
 
 - [x] Test if ```rosdiscover``` launch works with the created Docker
 
-- [ ] Create a C++ package that we can use to demonstrate something from ROSDiscover
+- [x] Check if we can understand the pipeline to get architecture read using rosdiscover
 
-- [ ] Figure out how to launch Fetch with just is arm and no head
+- [ ] Write down the steps to replicate ```RQ2``` in ROSDiscover paper
+
+- [x] Figure out how to launch Fetch with just is arm and no head. Not possible.s
 
 
 ## Resources

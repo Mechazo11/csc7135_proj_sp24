@@ -18,6 +18,8 @@ This file contains all the commands required to running this project
 * Launch the pick and place demo
 ```roslaunch fetch_gazebo_demo pick_place_demo.launch```
 
+* Launch the basic simualtion
+```roslaunch fetch_gazebo simulation.launch``` 
 
 #### Experiment
 * In a terminal move into the rosdiscover directory 

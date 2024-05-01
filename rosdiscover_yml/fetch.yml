@@ -3,4 +3,4 @@ sources:
 - /opt/ros/noetic/setup.bash
 - /home/ros_ws/devel/setup.bash
 launches:
-- /home/ros_ws/src/fetch_gazebo/fetch_gazebo/launch/playground.launch
+- /home/ros_ws/src/fetch_gazebo/fetch_gazebo/launch/simulation.launch
