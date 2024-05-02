@@ -55,7 +55,7 @@ export SETUPTOOLS_USE_DISTUTILS=stdlib
 
 ## TODO
 
-- [ ] Create a C++ package with launch file
+- [ ] Complete csc7135_pkg1 with a C++ node and a launch file
 
 - [ ] Write down the steps to replicate ```RQ2``` in ROSDiscover paper
 
@@ -80,3 +80,7 @@ export SETUPTOOLS_USE_DISTUTILS=stdlib
 2. Create ROS 1 C++ packages with [catkin tools](https://catkin-tools.readthedocs.io/en/latest/quick_start.html)
 
 3. Create launch file [within the package](https://automaticaddison.com/how-to-create-a-launch-file-in-ros-noetic/) 
+
+4. C++ ROS node design [notes](https://nu-msr.github.io/navigation_site/lectures/node_structure.html)
+
+5. ROS [Services](https://www.youtube.com/watch?v=_EtsntSAVKE)
