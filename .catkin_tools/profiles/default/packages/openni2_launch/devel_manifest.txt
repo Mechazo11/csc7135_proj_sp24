@@ -1,6 +1,6 @@
 openni2_camera/openni2_launch
-/home/icore_base/csc7135_project/devel/.private/openni2_launch/cmake.lock /home/icore_base/csc7135_project/devel/./cmake.lock
-/home/icore_base/csc7135_project/devel/.private/openni2_launch/lib/pkgconfig/openni2_launch.pc /home/icore_base/csc7135_project/devel/lib/pkgconfig/openni2_launch.pc
-/home/icore_base/csc7135_project/devel/.private/openni2_launch/lib/python3/dist-packages/openni2_launch/__init__.py /home/icore_base/csc7135_project/devel/lib/python3/dist-packages/openni2_launch/__init__.py
-/home/icore_base/csc7135_project/devel/.private/openni2_launch/share/openni2_launch/cmake/openni2_launchConfig-version.cmake /home/icore_base/csc7135_project/devel/share/openni2_launch/cmake/openni2_launchConfig-version.cmake
-/home/icore_base/csc7135_project/devel/.private/openni2_launch/share/openni2_launch/cmake/openni2_launchConfig.cmake /home/icore_base/csc7135_project/devel/share/openni2_launch/cmake/openni2_launchConfig.cmake
+/home/az/csc7135_proj_sp24/devel/.private/openni2_launch/cmake.lock /home/az/csc7135_proj_sp24/devel/./cmake.lock
+/home/az/csc7135_proj_sp24/devel/.private/openni2_launch/share/openni2_launch/cmake/openni2_launchConfig.cmake /home/az/csc7135_proj_sp24/devel/share/openni2_launch/cmake/openni2_launchConfig.cmake
+/home/az/csc7135_proj_sp24/devel/.private/openni2_launch/share/openni2_launch/cmake/openni2_launchConfig-version.cmake /home/az/csc7135_proj_sp24/devel/share/openni2_launch/cmake/openni2_launchConfig-version.cmake
+/home/az/csc7135_proj_sp24/devel/.private/openni2_launch/lib/python3/dist-packages/openni2_launch/__init__.py /home/az/csc7135_proj_sp24/devel/lib/python3/dist-packages/openni2_launch/__init__.py
+/home/az/csc7135_proj_sp24/devel/.private/openni2_launch/lib/pkgconfig/openni2_launch.pc /home/az/csc7135_proj_sp24/devel/lib/pkgconfig/openni2_launch.pc
