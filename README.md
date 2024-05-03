@@ -84,3 +84,5 @@ export SETUPTOOLS_USE_DISTUTILS=stdlib
 4. C++ ROS node design [notes](https://nu-msr.github.io/navigation_site/lectures/node_structure.html)
 
 5. ROS [Services](https://www.youtube.com/watch?v=_EtsntSAVKE)
+
+6. An example of a ROS C++ package conforming to [LARICS C++ standard](https://github.com/larics/example_ros_cpp)
