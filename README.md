@@ -34,6 +34,8 @@ export SETUPTOOLS_USE_DISTUTILS=stdlib
 
 * Install rgbd_launch ```sudo apt-get install ros-noetic-rgbd_launch```
 
+* Ensure ```numpy``` is installed in the enviornment (pipenv or conda)
+
 ## Setting up ROSDiscover and ROSWire
 * git clone ROSDiscover
 * cd into ```rosdiscover``` and then git clone ```roswire```
