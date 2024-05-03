@@ -53,9 +53,9 @@ include_directories(
 ## Declare C++ libraries and link libraries ##
 ##############################################
 
-# Node that simulates robot and arm control logic
-add_executable(robot_node src/robot_node.cpp)
-target_link_libraries(robot_node
+# Experiment 1 node
+add_executable(exp1_node src/exp1.cpp)
+target_link_libraries(exp1_node
   ${catkin_LIBRARIES}
 )
 
@@ -74,7 +74,7 @@ target_link_libraries(robot_node
 
 
 install(
-  TARGETS robot_node
+  TARGETS exp1_node
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
