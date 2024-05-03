@@ -32,6 +32,8 @@ export SETUPTOOLS_USE_DISTUTILS=stdlib
 
 * Install teleop-twist-keyboard ```sudo apt-get install ros-noetic-teleop-twist-keyboard```
 
+* Install rgbd_launch ```sudo apt-get install ros-noetic-rgbd_launch```
+
 ## Setting up ROSDiscover and ROSWire
 * git clone ROSDiscover
 * cd into ```rosdiscover``` and then git clone ```roswire```
