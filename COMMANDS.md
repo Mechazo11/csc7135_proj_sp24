@@ -20,6 +20,7 @@ This file contains all the commands required to running this project
 * Navigate to the workspace: ```cd ~/csc7135_proj_sp24/```
 * Build ```pkg1``` docker image: ```sudo docker image build -t pkg1 .```
 * List Docker images: ```sudo docker image ls```
+* Delete unwarranted image: ```TODO```
 * Test run this image: ```sudo docker run -it pkg1```
 
 #### Experiment
