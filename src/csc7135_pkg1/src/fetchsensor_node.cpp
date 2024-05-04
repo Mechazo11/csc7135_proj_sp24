@@ -1,7 +1,7 @@
 /***
- * @file exp1_node.cpp
- * @brief Driver file for Experiment 1
- * @author TODO
+ * @file fetchsensor_node.cpp
+ * @brief TODO
+ * @author Azmyin M. Kamal
  * @date 05/03/2024
 */
 
@@ -16,7 +16,8 @@ int main(int argc, char **argv){
     // Set up the ROS node.
     ros::init(argc, argv, "fetch_robot1"); // Initialize node with a name
     
-    //* TODO initialize a RobotNode that uses Node composition
+    //* TODO initialize a FetchRobot object
+    //* TODO initalize a FetchSensor object
     
     //ros::Rate loop_rate(10); // Set update rate for this node
     

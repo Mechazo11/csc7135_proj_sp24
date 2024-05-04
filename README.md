@@ -48,14 +48,24 @@ export SETUPTOOLS_USE_DISTUTILS=stdlib
 
 * Remove a docker image: ```TODO```
 
-
-
 * Useful links
     - https://medium.com/@sepideh.92sh/how-docker-revolutionizes-application-development-a-comprehensive-guide-for-beginners-fc2d3e53eb31
 
 
 ## Experiment Setup
-* Instructions on how to run such experiments are setup here
+
+These ```simple``` projects is written to emulate architectural bugs in a Fetch robot based on the detection library available in ```ROSDiscover```
+
+```FetchRobotController``` class emulates logical functions that may be used with to control locomotion and manipulation of the Fetch robot
+
+```FetchSensor``` is a class that emulates the vision sensor and arm joint states.
+
+* Packages and error dataset
+  * Pkg 1: ```FetchSensor``` sends IMU data but ```FetchRobotController``` subscribes to with wrong data format. RGB-D cameras like Zed2i can also compute orientation of camera along with vision. This experiment is to show if camera orientation is not recorded then calculating arm position will be wrong since the transformation of object observed from camera will not be accurate w.r.t to body frame which is a crucial step to eye-to-hand coordination problem.
+
+
+  * Pkg 2: Danling connector, ```FetchRobotController``` never starts selecting block even though it receives vision data.
+  * Pkg 3: Combination of both causing ```FetchRobotController``` to hit itself with its arm
 
 ## TODO
 
@@ -90,3 +100,7 @@ export SETUPTOOLS_USE_DISTUTILS=stdlib
 5. ROS [Services](https://www.youtube.com/watch?v=_EtsntSAVKE)
 
 6. An example of a ROS C++ package conforming to [LARICS C++ standard](https://github.com/larics/example_ros_cpp)
+
+7. Publisher and subscriber in one [cpp class](https://answers.ros.org/question/59725/publishing-to-a-topic-via-subscriber-callback-function/?answer=59738?answer=59738#post-id-59738)
+
+8. Using Class Methods as [callbacks](https://wiki.ros.org/roscpp_tutorials/Tutorials/UsingClassMethodsAsCallbacks)

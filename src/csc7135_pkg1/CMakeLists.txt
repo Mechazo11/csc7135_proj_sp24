@@ -53,8 +53,14 @@ include_directories(
 ## Declare C++ libraries and link libraries ##
 ##############################################
 
-# Experiment 1 node
-add_executable(exp1_node src/exp1.cpp)
+# FetchRobot node
+add_executable(fetchrobot_node src/fetchrobot_node.cpp)
+target_link_libraries(exp1_node
+  ${catkin_LIBRARIES}
+)
+
+# FetchSensor node
+add_executable(fetchsensor_node src/fetchsensor_node.cpp)
 target_link_libraries(exp1_node
   ${catkin_LIBRARIES}
 )
