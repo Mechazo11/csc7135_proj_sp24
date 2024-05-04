@@ -18,17 +18,18 @@ This file contains all the commands required to running this project
 #### Create and test docker image
 
 * Navigate to the workspace: ```cd ~/csc7135_proj_sp24/```
-* Build ```pkg1``` docker image: ```docker image build -t pkg1 .```
-* Test run this image: ```docker run -it pkg1```
+* Build ```pkg1``` docker image: ```sudo docker image build -t pkg1 .```
+* List Docker images: ```sudo docker image ls```
+* Test run this image: ```sudo docker run -it pkg1```
 
 #### Experiment
+
 * In a terminal move into the rosdiscover directory 
 ```cd ~/Documents/rosdiscover/``` 
 
 * Activate the environment ```. /home/icore_base/.local/share/virtualenvs/rosdiscover-aYG4O-1F/bin/activate```
 
 * Activate ROSDiscover enviornment in az_ubunut: ```. /home/az/.local/share/virtualenvs/rosdiscover-2-DhvFio/bin/activate```
-
 
 * Test 1: Test ROSDiscover launch
 ```rosdiscover launch /home/icore_base/csc7135_project/rosdiscover_yml/fetch.yml```

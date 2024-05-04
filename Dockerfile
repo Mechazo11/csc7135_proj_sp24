@@ -5,10 +5,6 @@ RUN apt-get update && apt-get install -y nano \
                                         python3-pip \ 
                                         python3-catkin-tools \
                                         python3-osrf-pycommon \
-                                        ros-noetic-geometry2*\
-                                        ros-noetic-navigation\
-                                        ros-noetic-moveit\
-                                        ros-noetic-simple-grasping\
                                         && rm -rf /var/lib/apt/lists/*
 
 # Create the catkin workspace directory structure in the home directory
