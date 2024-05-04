@@ -22,8 +22,10 @@ FetchRobotController::FetchRobotController(){
     * you can replace the last argument with the keyword this, 
     * which means that the subscriber will refer to the class it is part of. 
    */
+    // sub_head_imu_ = nh.subscribe("/fetch/head_imu_data", 10, 
+    //                 &FetchRobotController::headImuCallback, this); // using sensor_msgs.Imu
     sub_head_imu_ = nh.subscribe("/fetch/head_imu_data", 10, 
-                    &FetchRobotController::headImuCallback, this);
+                    &FetchRobotController::headImuCallbackStr, this); // using std_msgs.String
 }
 /**
  * @brief Simualtes receipt of orientation of robot's head
@@ -33,6 +35,11 @@ void FetchRobotController::headImuCallback(const sensor_msgs::Imu::ConstPtr& msg
     // Access and print the timestamp
     ROS_INFO("Received Imu message with timestamp: %f", msg->header.stamp.toSec());
     // Additional processing if needed
+}
+
+void FetchRobotController::headImuCallbackStr(const std_msgs::String::ConstPtr& msg){
+    // Access and print the message data
+    ROS_INFO("Received String message: %s", msg->data.c_str());
 }
 
 /**
