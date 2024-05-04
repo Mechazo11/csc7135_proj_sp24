@@ -9,29 +9,25 @@ This file contains all the commands required to running this project
 ```echo $ROS_DISTRO```
 
 ### Create C++ project with ```catkin create```
+
 * in ws/src run this command: ```catkin create pkg your_package_name --catkin-deps roscpp```
 
-* ```cd ~/csc7135_proj_sp24/src```
-* ```catkin create pkg csc7135_pkg1 --catkin-deps roscpp std_msgs```
+* Go to the workspace/src directory: ```cd ~/csc7135_proj_sp24/src```
+* Example of creating a package: ```catkin create pkg csc7135_pkg1 --catkin-deps roscpp std_msgs sensor_msgs```
 
-#### Testing the docker image
-* Test run this image: ```docker run -it test1```
+#### Create and test docker image
 
-#### Testing Fetch robot
-* Launch the playground for pick-and-place simulation
-```roslaunch fetch_gazebo pickplace_playground.launch```
-
-* Launch the pick and place demo
-```roslaunch fetch_gazebo_demo pick_place_demo.launch```
-
-* Launch the basic simualtion
-```roslaunch fetch_gazebo simulation.launch``` 
+* Navigate to the workspace: ```cd ~/csc7135_proj_sp24/```
+* Build ```pkg1``` docker image: ```docker image build -t pkg1 .```
+* Test run this image: ```docker run -it pkg1```
 
 #### Experiment
 * In a terminal move into the rosdiscover directory 
 ```cd ~/Documents/rosdiscover/``` 
 
 * Activate the environment ```. /home/icore_base/.local/share/virtualenvs/rosdiscover-aYG4O-1F/bin/activate```
+
+* Activate ROSDiscover enviornment in az_ubunut: ```. /home/az/.local/share/virtualenvs/rosdiscover-2-DhvFio/bin/activate```
 
 
 * Test 1: Test ROSDiscover launch

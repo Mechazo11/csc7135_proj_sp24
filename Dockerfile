@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y nano \
 # Create the catkin workspace directory structure in the home directory
 RUN mkdir -p /home/ros_ws/src
 
-# Copy the src directory from host machine
+# Copy the src directory from host machine to image
 COPY ./src /home/ros_ws/src
 
 # Set the working diretory

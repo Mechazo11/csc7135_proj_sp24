@@ -39,3 +39,13 @@ export SETUPTOOLS_USE_DISTUTILS=stdlib
 * Install rgbd_launch ```sudo apt-get install ros-noetic-rgbd_launch```
 
 * Ensure ```numpy``` is installed in the enviornment (pipenv or conda)
+
+#### Testing Fetch robot
+* Launch the playground for pick-and-place simulation
+```roslaunch fetch_gazebo pickplace_playground.launch```
+
+* Launch the pick and place demo
+```roslaunch fetch_gazebo_demo pick_place_demo.launch```
+
+* Launch the basic simualtion
+```roslaunch fetch_gazebo simulation.launch``` 

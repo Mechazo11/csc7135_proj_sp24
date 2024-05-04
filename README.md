@@ -1,9 +1,16 @@
 ### Project Readme
 
-## Changelogs
+TODO
 
-* !!!The Fetch gazebo modified to work in ROS Noetic will be released as an open source project on May 5th
-* It is not used directly for the experiments done under this class project.
+All commands used in this project is compiled in the ```COMMANDS.md``` text file
+
+Script files to use ```ROSDiscover``` based on experiment parameters are provided in the [csc7135_rosdiscover_exp](https://github.com/Mechazo11/csc7135_rosdiscover_exp.git) repository
+
+## Contributions
+
+* The Fetch gazebo package modified to work in ROS Noetic will be released as an open source project on May 5th. While ultimately not required to due to complexity and time constraint, it is still a worthwhile contribution that came out of this project.
+
+* Demonstrated usage of ROSDiscover`s capabilities on easy-to-use ROS systems to do a feasilibity analysis for it to be used for mobile manipulator systems.
 
 
 ## Tutorials/Useful references
@@ -16,18 +23,17 @@
 * Install ```rosdiscover``` and then cd into ```roswire``` and install it
 * Test installation ```rosdiscover --help```
 
-## Creating a Docker image of the workspace
-* Navigate to the workspace: ```cd ~/csc735_project/```
-* Build ```test1``` docker image: ```docker image build -t test1 .```
-
-* Remove a docker image: ```TODO```
-
 * Useful links
     - https://medium.com/@sepideh.92sh/how-docker-revolutionizes-application-development-a-comprehensive-guide-for-beginners-fc2d3e53eb31
 
 
 ## Experiment Setup
 
+### Creating Docker images
+
+In the workspace directory we have defined as ```Dockerfile``` that contains the instructions necessary for ```Docker```  to compose an image based  
+
+### Running ROSDiscover
 These ```simple``` projects is written to emulate architectural bugs in a Fetch robot based on the detection library available in ```ROSDiscover```
 
 ```FetchRobotController``` class emulates logical functions that may be used with to control locomotion and manipulation of the Fetch robot
@@ -37,29 +43,37 @@ These ```simple``` projects is written to emulate architectural bugs in a Fetch 
 * Packages and error dataset
   * Pkg 1: ```FetchSensor``` sends IMU data but ```FetchRobotController``` subscribes to with wrong data format. RGB-D cameras like Zed2i can also compute orientation of camera along with vision. This experiment is to show if camera orientation is not recorded then calculating arm position will be wrong since the transformation of object observed from camera will not be accurate w.r.t to body frame which is a crucial step to eye-to-hand coordination problem.
 
-  
   * Pkg 2: Danling connector, ```FetchRobotController``` never starts selecting block even though it receives vision data.
+
   * Pkg 3: Combination of both causing ```FetchRobotController``` to hit itself with its arm
 
 ## TODO
 
-- [ ] Complete csc7135_pkg1 with a C++ node and a launch file
+* [ ] Create ```pkg1```, ```pkg2``` and ```pkg3``` image(s) if time permits
 
-- [ ] Write down the steps to replicate ```RQ2``` in ROSDiscover paper
+* [ ] Finish all experiments and compile results
 
-- [ ] Create and test the experiments.yml file for ```fetch_lsu```
+* [ ] Finish draft of report
 
-- [x] Correctly install ```ROSDiscover``` and ```ROSWire```
+* [ ] Finish and submit final report
 
-- [x] Port ```fetch-gazebo``` and ```fetch``` into ROS Noetic
+* [ ] Make ```csc7135_proj_sp24```, ```csc7135_rosdiscover_exp``` and ```fetch_gazebo_noetic_ws``` repositories ***public***. 
 
-- [x] Learn how to convert a catkin_ws to Docker image
+* [x] Complete csc7135_pkg1 with a C++ node and a launch file
 
-- [x] Test if ```rosdiscover``` launch works with the created Docker
+* [x] Write down the steps to replicate ```RQ2``` in ROSDiscover paper
 
-- [x] Check if we can understand the pipeline to get architecture read using rosdiscover
+* [x] Correctly install ```ROSDiscover``` and ```ROSWire```
 
-- [x] Figure out how to launch Fetch with just is arm and no head. Not possible.s
+* [x] Port ```fetch-gazebo``` and ```fetch``` into ROS Noetic
+
+* [x] Learn how to convert a catkin_ws to Docker image
+
+* [x] Test if ```rosdiscover``` launch works with the created Docker
+
+* [x] Check if we can understand the pipeline to get architecture read using rosdiscover
+
+* [x] Figure out how to launch Fetch with just is arm and no head. Not possible.s
 
 
 ## Resources / References
