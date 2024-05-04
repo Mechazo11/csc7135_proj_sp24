@@ -1,40 +1,14 @@
 ### Project Readme
 
-## Changes from ROS Melodic build
-* Changed all relevevant .py script's top-level shebang to ```#!/usr/bin/env python3```
+## Changelogs
+
+* !!!The Fetch gazebo modified to work in ROS Noetic will be released as an open source project on May 5th
+* It is not used directly for the experiments done under this class project.
+
 
 ## Tutorials/Useful references
 * [Fetch official tutorial for gazebo](https://docs.fetchrobotics.com/gazebo.html)
 
-## Preamble
-
-### Solve the issue with ```PYTHONPATH``` and ```setuptools ```
-
-Follow these steps
-* Open a File exlorer, go to ```Home```
-* Hit ```Ctrl+H``` to allow viewing hidden files
-* Open ```.bashrc```
-* Scroll down to the very bottom and copy these lines
-```
-export PYTHONPATH="/usr/lib/python3/dist-packages:$PYTHONPATH"
-export SETUPTOOLS_USE_DISTUTILS=stdlib
-```
-
-### Install dependencies before building catkin
-
-* Intall geometry2 module ```sudo apt install ros-noetic-geometry2*```
-
-* Intall navigation module ```sudo apt install ros-noetic-navigation```
-
-* Install moveit module ```sudo apt install ros-noetic-moveit```
-
-* Install simple_grasping module ```sudo apt install ros-noetic-simple-grasping```
-
-* Install teleop-twist-keyboard ```sudo apt-get install ros-noetic-teleop-twist-keyboard```
-
-* Install rgbd_launch ```sudo apt-get install ros-noetic-rgbd_launch```
-
-* Ensure ```numpy``` is installed in the enviornment (pipenv or conda)
 
 ## Setting up ROSDiscover and ROSWire
 * git clone ROSDiscover
