@@ -13,7 +13,10 @@ This file contains all the commands required to running this project
 * in ws/src run this command: ```catkin create pkg your_package_name --catkin-deps roscpp```
 
 * Go to the workspace/src directory: ```cd ~/csc7135_proj_sp24/src```
+
 * Example of creating a package: ```catkin create pkg csc7135_pkg1 --catkin-deps roscpp std_msgs sensor_msgs```
+
+* Build this package: ```catkin build csc7135_pkg1 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON```
 
 #### Create and test docker image
 
@@ -32,3 +35,4 @@ This file contains all the commands required to running this project
 #### Experiment 1: Subscription to wrong data type
 
 * Step 1: Derive groundtruth architecture: ```python3 observe-system.py fetch_lsu```
+* Step 2: Run ROSDiscover to statically recover architecture: ```python3 recover-system.py recovery fetch_lsu```
