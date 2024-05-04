@@ -1,3 +1,16 @@
 {
-    "cmake.configureOnOpen": false
+    "cmake.configureOnOpen": false,
+    "python.autoComplete.extraPaths": [
+        "/home/az/csc7135_proj_sp24/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/usr/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/az/csc7135_proj_sp24/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/usr/lib/python3/dist-packages"
+    ],
+    "files.associations": {
+        "*.ipp": "cpp"
+    }
 }

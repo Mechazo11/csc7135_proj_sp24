@@ -8,22 +8,28 @@ This file contains all the commands required to running this project
 * Check version of ROS running
 ```echo $ROS_DISTRO```
 
-#### ROSDiscover commands
-* In a terminal move into the rosdiscover directory ```cd ~/Documents/rosdiscover/``` 
+### Create C++ project with ```catkin create```
+
+* in ws/src run this command: ```catkin create pkg your_package_name --catkin-deps roscpp```
+
+* Go to the workspace/src directory: ```cd ~/csc7135_proj_sp24/src```
+* Example of creating a package: ```catkin create pkg csc7135_pkg1 --catkin-deps roscpp std_msgs sensor_msgs```
+
+#### Create and test docker image
+
+* Navigate to the workspace: ```cd ~/csc7135_proj_sp24/```
+* Build ```pkg1``` docker image: ```sudo docker image build -t pkg1 .```
+* List Docker images: ```sudo docker image ls```
+* Test run this image: ```sudo docker run -it pkg1```
+
+#### Experiment
+
+* In a terminal move into the rosdiscover directory 
+```cd ~/Documents/rosdiscover/``` 
 
 * Activate the environment ```. /home/icore_base/.local/share/virtualenvs/rosdiscover-aYG4O-1F/bin/activate```
 
-* Test ROSDiscover launch emulation
+* Activate ROSDiscover enviornment in az_ubunut: ```. /home/az/.local/share/virtualenvs/rosdiscover-2-DhvFio/bin/activate```
 
-#### Testing node in Fetch robot
-* Launch the playground for pick-and-place simulation
-```roslaunch fetch_gazebo pickplace_playground.launch```
-
-* Launch the pick and place demo
-```roslaunch fetch_gazebo_demo pick_place_demo.launch```
-
-* Activate ROSDiscover env
-
-
-* Test 1: Test ROSDiscover call signature
-```rosdiscover launch example/csc_7135/fetch.yml```
+* Test 1: Test ROSDiscover launch
+```rosdiscover launch /home/icore_base/csc7135_project/rosdiscover_yml/fetch.yml```
