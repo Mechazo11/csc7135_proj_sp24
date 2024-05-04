@@ -33,6 +33,9 @@ RUN mkdir -p /home/ros_ws/src
 # Copy the src directory from host machine to image
 COPY ./src /home/ros_ws/src
 
+# Copy /startup-vnc.sh
+COPY startup-vnc.sh /
+
 # Set the working diretory
 WORKDIR /home/ros_ws
 
