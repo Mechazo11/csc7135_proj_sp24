@@ -24,12 +24,10 @@ This file contains all the commands required to running this project
 
 #### Experiment
 
-* In a terminal move into the rosdiscover directory 
-```cd ~/Documents/rosdiscover/``` 
-
-* Activate the environment ```. /home/icore_base/.local/share/virtualenvs/rosdiscover-aYG4O-1F/bin/activate```
+* Move into the ```csc7135_rosdiscover_exp/scripts``` directory: ```cd ~/Documents/csc7135_rosdiscover_exp/scripts```
 
 * Activate ROSDiscover enviornment in az_ubunut: ```. /home/az/.local/share/virtualenvs/rosdiscover-2-DhvFio/bin/activate```
 
-* Test 1: Test ROSDiscover launch
-```rosdiscover launch /home/icore_base/csc7135_project/rosdiscover_yml/fetch.yml```
+#### Experiment 1: Subscription to wrong data type
+
+* Step 1: Derive groundtruth architecture: ```python3 observe-system.py fetch_lsu```

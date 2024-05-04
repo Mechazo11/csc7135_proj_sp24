@@ -40,6 +40,9 @@ These ```simple``` projects is written to emulate architectural bugs in a Fetch 
 
 ```FetchSensor``` is a class that emulates the vision sensor and arm joint states.
 
+* General Procedure;
+  * First obser
+
 * Packages and error dataset
   * Pkg 1: ```FetchSensor``` sends IMU data but ```FetchRobotController``` subscribes to with wrong data format. RGB-D cameras like Zed2i can also compute orientation of camera along with vision. This experiment is to show if camera orientation is not recorded then calculating arm position will be wrong since the transformation of object observed from camera will not be accurate w.r.t to body frame which is a crucial step to eye-to-hand coordination problem.
 
@@ -56,6 +59,8 @@ These ```simple``` projects is written to emulate architectural bugs in a Fetch 
 * [ ] Finish draft of report
 
 * [ ] Finish and submit final report
+
+* [ ] Write instructions on how to download the two repositories and how to setup ROSDiscover
 
 * [ ] Make ```csc7135_proj_sp24```, ```csc7135_rosdiscover_exp``` and ```fetch_gazebo_noetic_ws``` repositories ***public***. 
 
