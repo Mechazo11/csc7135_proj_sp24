@@ -22,6 +22,8 @@ Script files to use ```ROSDiscover``` based on experiment parameters are provide
 * cd into ```rosdiscover``` and then git clone ```roswire```
 * Install ```rosdiscover``` and then cd into ```roswire``` and install it
 * Test installation ```rosdiscover --help```
+* Intall the following dependencies in the host machine
+  * Java: ```sudo apt install default-jre```
 
 * Useful links
     - https://medium.com/@sepideh.92sh/how-docker-revolutionizes-application-development-a-comprehensive-guide-for-beginners-fc2d3e53eb31

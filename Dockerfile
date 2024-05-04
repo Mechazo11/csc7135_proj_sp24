@@ -19,10 +19,14 @@ RUN apt-get update \
                         xterm \
                         xvfb \
                         x11vnc \
-                    && apt-get clean \
-                    && rm -rf /var/lib/apt/lists/* \
-                    && mkdir ~/.vnc \
-                    && /bin/bash -c "echo -e 'password\npassword\nn' | vncpasswd"
+    && apt-get clean \
+    && apt-get update \
+    && apt-get install -y zlib1g-dev \
+    && apt-get install -y default-jre \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && mkdir ~/.vnc \
+    && /bin/bash -c "echo -e 'password\npassword\nn' | vncpasswd"
 ENV TINI_VERSION v0.9.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /bin/tini
 RUN chmod +x /bin/tini
@@ -40,7 +44,7 @@ COPY startup-vnc.sh /
 WORKDIR /home/ros_ws
 
 # Set up the workspace and build your ROS packages
-RUN /bin/bash -c ". /opt/ros/noetic/setup.sh; catkin build"
+RUN /bin/bash -c ". /opt/ros/noetic/setup.sh; catkin build csc7135_pkg1 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
 
 # Source the setup files for ROS
 RUN echo "source /opt/ros/noetic/setup.bash" >> /root/.bashrc && \

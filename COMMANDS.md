@@ -35,4 +35,13 @@ This file contains all the commands required to running this project
 #### Experiment 1: Subscription to wrong data type
 
 * Step 1: Derive groundtruth architecture: ```python3 observe-system.py fetch_lsu```
-* Step 2: Run ROSDiscover to statically recover architecture: ```python3 recover-system.py recovery fetch_lsu```
+* Step 2: Check the architecture against ACME rules: ```python3 check-architecture.py observed fetch_lsu```
+
+<!-- * Step 2: Run ROSDiscover to statically recover architecture: ```python3 recover-system.py recovery fetch_lsu``` -->
+
+## Results and Observations
+
+### Issues with the ROSDiscover
+
+* We could not get the ```rosdiscover-cxx-recover``` does not work in Step 2 from replication_package.
+* Hence, the experimental results only uses dynamic approach in recovering run time architecture
