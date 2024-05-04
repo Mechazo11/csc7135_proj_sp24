@@ -54,14 +54,20 @@ include_directories(
 ##############################################
 
 # FetchRobot node
-add_executable(fetchrobot_node src/fetchrobot_node.cpp)
-target_link_libraries(exp1_node
+add_executable(fetchcontroller_node 
+              src/fetchcontroller_node.cpp
+              src/robot_controller.cpp
+)
+target_link_libraries(fetchcontroller_node
   ${catkin_LIBRARIES}
 )
 
 # FetchSensor node
-add_executable(fetchsensor_node src/fetchsensor_node.cpp)
-target_link_libraries(exp1_node
+add_executable(fetchsensor_node 
+                src/fetchsensor_node.cpp
+                src/robot_sensor.cpp
+)
+target_link_libraries(fetchsensor_node
   ${catkin_LIBRARIES}
 )
 
@@ -80,7 +86,7 @@ target_link_libraries(exp1_node
 
 
 install(
-  TARGETS exp1_node
+  TARGETS fetchcontroller_node fetchsensor_node
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}

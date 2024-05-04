@@ -1,12 +1,12 @@
-/***
- * @file fetchsensor_node.cpp
+/**
+ * @file fetchcontroller_node.cpp
  * @brief TODO
  * @author Azmyin M. Kamal
- * @date 05/03/2024
+ * @date 2024-05-02
 */
 
 // Includes
-#include "robot_sensor.hpp"
+#include "robot_controller.hpp"
 
 /**
  * Main entry point to this node
@@ -14,13 +14,12 @@
 int main(int argc, char **argv){
 
     // Set up the ROS node.
-    ros::init(argc, argv, "fetch_sensor"); // Initialize node with a name
+    ros::init(argc, argv, "fetch_robot"); // Initialize node with a name
     ros::Rate rate(20); // 20 Hz update
-    FetchSensor sensor;
+    FetchRobotController fetch;
     // Blocking
     while(ros::ok())
-    {
-        sensor.publishHeadImuMessage();  
+    {  
         ros::spinOnce(); // Process callbacks
         rate.sleep();        
     }

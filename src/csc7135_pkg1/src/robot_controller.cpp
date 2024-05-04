@@ -1,5 +1,5 @@
 /**
- * @file robot_node.cpp
+ * @file robot_controller.cpp
  * @brief Contains ```FetchRobotController``` class implementation
  * @author Azmyin M. Kamal
  * @date 2024-05-02
@@ -7,7 +7,7 @@
 */
 
 //* Includes
-#include "robot_class.hpp"
+#include "robot_controller.hpp"
 
 /**
  * @brief Constructor

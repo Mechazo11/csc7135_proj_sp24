@@ -22,13 +22,14 @@
 class FetchSensor
 {
     public:
-    FetchSensor(); // Constructor
-    ~FetchSensor();// Destructor
-    void publishHeadImuMessage(); // Function that simulates Imu messages being sent out
-
-    private:
-    ros::NodeHandle nh; 
-    ros::Publisher imu_pub;
+        // Methods
+        FetchSensor(); // Constructor
+        ~FetchSensor();// Destructor
+        void publishHeadImuMessage(); // Function that simulates Imu messages being sent out
+        
+        // Variables
+        ros::NodeHandle nh; 
+        ros::Publisher imu_pub;
 };
 
 #endif

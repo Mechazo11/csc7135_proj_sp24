@@ -1,13 +1,13 @@
 /**
- * @file robot_node.hpp
+ * @file robot_controller.hpp
  * @author Azmyin M. Kamal
  * @brief Contains ```FetchRobotController``` class definitions
  * @version 0.1
  * @date 2024-05-02
  * 
  */
-#ifndef ROBOT_CLASS_HPP
-#define ROBOT_CLASS_HPP
+#ifndef ROBOT_CONTROLLER_HPP
+#define ROBOT_CONTROLLER_HPP
 
 //* C/C++
 
@@ -22,13 +22,13 @@
 class FetchRobotController
 {
     public:
-    FetchRobotController(); // Constructor
-    ~FetchRobotController();// Destructor
-    void headImuCallback(const sensor_msgs::Imu::ConstPtr& msg);
-    
-    private:
-    ros::NodeHandle nh;
-    ros::Subscriber sub_head_imu_;
+        // Methods
+        FetchRobotController(); // Constructor
+        ~FetchRobotController();// Destructor
+        void headImuCallback(const sensor_msgs::Imu::ConstPtr& msg);
+        // Variables
+        ros::NodeHandle nh;
+        ros::Subscriber sub_head_imu_;
 };
 
 #endif
