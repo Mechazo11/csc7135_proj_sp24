@@ -62,12 +62,21 @@ target_link_libraries(fetchcontroller_node
   ${catkin_LIBRARIES}
 )
 
-# FetchSensor node
+# FetchSensor node [good]
 add_executable(fetchsensor_node 
                 src/fetchsensor_node.cpp
                 src/robot_sensor.cpp
 )
 target_link_libraries(fetchsensor_node
+  ${catkin_LIBRARIES}
+)
+
+# FetchSensor node [bad]
+add_executable(fetchsensorbad_node 
+                src/fetchsensorbad_node.cpp
+                src/robot_sensor.cpp
+)
+target_link_libraries(fetchsensorbad_node
   ${catkin_LIBRARIES}
 )
 
@@ -86,7 +95,7 @@ target_link_libraries(fetchsensor_node
 
 
 install(
-  TARGETS fetchcontroller_node fetchsensor_node
+  TARGETS fetchcontroller_node fetchsensor_node fetchsensorbad_node
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}

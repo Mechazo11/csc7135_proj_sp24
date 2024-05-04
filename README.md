@@ -63,7 +63,7 @@ These ```simple``` projects is written to emulate architectural bugs in a Fetch 
 * Packages and error dataset
   * Pkg 1: ```FetchSensor``` sends IMU data but ```FetchRobotController``` subscribes to with wrong data format. RGB-D cameras like Zed2i can also compute orientation of camera along with vision. This experiment is to show if camera orientation is not recorded then calculating arm position will be wrong since the transformation of object observed from camera will not be accurate w.r.t to body frame which is a crucial step to eye-to-hand coordination problem.
 
-
+  
   * Pkg 2: Danling connector, ```FetchRobotController``` never starts selecting block even though it receives vision data.
   * Pkg 3: Combination of both causing ```FetchRobotController``` to hit itself with its arm
 
