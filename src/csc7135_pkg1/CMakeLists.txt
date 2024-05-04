@@ -100,6 +100,12 @@ install(DIRECTORY include/${PROJECT_NAME}/
   PATTERN "*.hpp" 
 )
 
+# Install launch files
+install(
+  DIRECTORY launch/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
+)
+
 # TODO this will be needed for ROSDiscover
 ## Mark other files for installation (e.g. launch and bag files, etc.)
 # install(FILES
