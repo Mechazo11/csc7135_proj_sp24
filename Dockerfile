@@ -23,9 +23,9 @@ RUN apt-get update \
                     && rm -rf /var/lib/apt/lists/* \
                     && mkdir ~/.vnc \
                     && /bin/bash -c "echo -e 'password\npassword\nn' | vncpasswd"
-                # ENV TINI_VERSION v0.9.0
-                # ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /bin/tini
-                # RUN chmod +x /bin/tini
+ENV TINI_VERSION v0.9.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /bin/tini
+RUN chmod +x /bin/tini
 
 # Create the catkin workspace directory structure in the home directory
 RUN mkdir -p /home/ros_ws/src
