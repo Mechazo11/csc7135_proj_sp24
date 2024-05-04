@@ -28,6 +28,7 @@ class FetchRobotController
         void headImuCallback(const sensor_msgs::Imu::ConstPtr& msg);
         // Variables
         ros::NodeHandle nh;
+        // ros::Rate r;
         ros::Subscriber sub_head_imu_;
 };
 

@@ -15,8 +15,9 @@ int main(int argc, char **argv){
 
     // Set up the ROS node.
     ros::init(argc, argv, "fetch_robot"); // Initialize node with a name
-    ros::Rate rate(20); // 20 Hz update
     FetchRobotController fetch;
+    ros::Rate rate(20); // 20 Hz update
+    
     // Blocking
     while(ros::ok())
     {  

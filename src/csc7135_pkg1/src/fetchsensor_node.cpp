@@ -15,8 +15,8 @@ int main(int argc, char **argv){
 
     // Set up the ROS node.
     ros::init(argc, argv, "fetch_sensor"); // Initialize node with a name
+    FetchSensor sensor; // Nodehandle needs to be created first
     ros::Rate rate(20); // 20 Hz update
-    FetchSensor sensor;
     // Blocking
     while(ros::ok())
     {
