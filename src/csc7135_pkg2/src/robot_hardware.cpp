@@ -45,7 +45,9 @@ void FetchHardware::jointCallback(const sensor_msgs::JointState::ConstPtr& joint
      * Logic to convert joint commands to actuation on motors would have gone here
     */
     std::vector<std::string> joint_names = joint_msg->name;
+    std::cout <<"--------------------------------------------"<<std::endl;
     std::cout <<"FetchHardware: received joint command data"<<std::endl;
+    std::cout <<"--------------------------------------------"<<std::endl;
     /**
      * Calls another class that interfaces with physical hardware
     */
