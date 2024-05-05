@@ -25,9 +25,6 @@ Script files to use ```ROSDiscover``` based on experiment parameters are provide
 * Intall the following dependencies in the host machine
   * Java: ```sudo apt install default-jre```
 
-* Useful links
-    - https://medium.com/@sepideh.92sh/how-docker-revolutionizes-application-development-a-comprehensive-guide-for-beginners-fc2d3e53eb31
-
 
 ## Experiment Setup
 
@@ -48,11 +45,12 @@ These ```simple``` projects is written to emulate architectural bugs in a Fetch 
 * Packages and error dataset
   * Pkg 1: ```FetchSensor``` sends IMU data but ```FetchRobotController``` subscribes to with wrong data format. RGB-D cameras like Zed2i can also compute orientation of camera along with vision. This experiment is to show if camera orientation is not recorded then calculating arm position will be wrong since the transformation of object observed from camera will not be accurate w.r.t to body frame which is a crucial step to eye-to-hand coordination problem.
 
-  * Pkg 2: Danling connector, ```FetchRobotController``` never starts selecting block even though it receives vision data.
-
-  * Pkg 3: Combination of both causing ```FetchRobotController``` to hit itself with its arm
+  * Pkg 2: Danling connector: The idea is user defines an object to be manupulated.
+  ```FetchRobotController``` receives image data but does not send ```ACK``` to the ```FetchSensor```. Thus, ```FetchSensor``` keeps repeating the same data over and over again
 
 ## TODO
+
+* [x] Look into the pick_place launcher to see if we can generate a ```red``` and a ```green``` object
 
 * [ ] Create ```pkg1```, ```pkg2``` and ```pkg3``` image(s) if time permits
 
@@ -64,7 +62,7 @@ These ```simple``` projects is written to emulate architectural bugs in a Fetch 
 
 * [ ] Write instructions on how to download the two repositories and how to setup ROSDiscover
 
-* [ ] Make ```csc7135_proj_sp24```, ```csc7135_rosdiscover_exp``` and ```fetch_gazebo_noetic_ws``` repositories ***public***. 
+* [ ] Make ```csc7135_proj_sp24```, ```csc7135_rosdiscover_exp``` and ```fetch_gazebo_noetic_ws``` repositories ***public***
 
 * [x] Complete csc7135_pkg1 with a C++ node and a launch file
 
@@ -99,3 +97,5 @@ These ```simple``` projects is written to emulate architectural bugs in a Fetch 
 7. Publisher and subscriber in one [cpp class](https://answers.ros.org/question/59725/publishing-to-a-topic-via-subscriber-callback-function/?answer=59738?answer=59738#post-id-59738)
 
 8. Using Class Methods as [callbacks](https://wiki.ros.org/roscpp_tutorials/Tutorials/UsingClassMethodsAsCallbacks)
+
+9. Usefulness of [Docker](https://medium.com/@sepideh.92sh/how-docker-revolutionizes-application-development-a-comprehensive-guide-for-beginners-fc2d3e53eb31)

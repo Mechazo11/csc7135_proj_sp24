@@ -10,12 +10,8 @@ This file contains all the commands required to running this project
 
 ### Create C++ project with ```catkin create```
 
-* in ws/src run this command: ```catkin create pkg your_package_name --catkin-deps roscpp```
-
 * Go to the workspace/src directory: ```cd ~/csc7135_proj_sp24/src```
-
-* Example of creating a package: ```catkin create pkg csc7135_pkg1 --catkin-deps roscpp std_msgs sensor_msgs```
-
+* Example of creating a package: ```catkin create pkg csc7135_pkg2 --catkin-deps roscpp std_msgs sensor_msgs```
 * Build this package: ```catkin build csc7135_pkg1 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON```
 
 #### Create and test docker image
@@ -39,7 +35,7 @@ This file contains all the commands required to running this project
 * Step 1: Derive groundtruth architecture: ```python3 observe-system.py pkg1```
 * Step 2: Check the architecture against ACME rules: ```python3 check-architecture.py observed pkg1```
 
-#### Experiment 2: Subscription to wrong data type
+#### Experiment 2: Dangling connectors
 
 * Step 1: Derive groundtruth architecture: ```python3 observe-system.py pkg2```
 * Step 2: Check the architecture against ACME rules: ```python3 check-architecture.py observed pkg2```
