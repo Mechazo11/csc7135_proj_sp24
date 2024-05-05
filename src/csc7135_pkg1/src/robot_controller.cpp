@@ -30,7 +30,9 @@ FetchRobotController::FetchRobotController(){
  * @attention This is the correct signature
 */
 void FetchRobotController::headImuCallback(const sensor_msgs::Imu::ConstPtr& msg) {
-    ROS_INFO("Received Imu message with timestamp: %f", msg->header.stamp.toSec());
+    std::cout <<"FetchController: Received IMU data"<<std::endl;
+    // std::cout <<"\n"<<std::endl;
+    //ROS_INFO("Received Imu message with timestamp: %f", msg->header.stamp.toSec());
 }
 
 /**

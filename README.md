@@ -39,11 +39,12 @@ These ```simple``` projects is written to emulate architectural bugs in a Fetch 
 
 ```FetchSensor``` is a class that emulates the vision sensor and arm joint states.
 
-* General Procedure;
-  * First obser
 
 * Packages and error dataset
-  * Pkg 1: ```FetchSensor``` sends IMU data but ```FetchRobotController``` subscribes to with wrong data format. RGB-D cameras like Zed2i can also compute orientation of camera along with vision. This experiment is to show if camera orientation is not recorded then calculating arm position will be wrong since the transformation of object observed from camera will not be accurate w.r.t to body frame which is a crucial step to eye-to-hand coordination problem.
+  
+  RGB-D cameras like Zed2i can also compute orientation of camera along with vision. This experiment is to show if camera orientation is not recorded then calculating arm position will be wrong since the transformation of object observed from camera will not be accurate w.r.t to body frame which is a crucial step to eye-to-hand coordination problem.
+  
+  * Pkg 1: ```FetchSensor``` means to send IMU data but erroneous sends ***wrong data format***. This causes causes a run-time crash
 
   * Pkg 2: Danling connector: The idea is user defines an object to be manupulated.
   ```FetchRobotController``` receives image data but does not send ```ACK``` to the ```FetchSensor```. Thus, ```FetchSensor``` keeps repeating the same data over and over again
@@ -52,7 +53,7 @@ These ```simple``` projects is written to emulate architectural bugs in a Fetch 
 
 * [x] Look into the pick_place launcher to see if we can generate a ```red``` and a ```green``` object
 
-* [ ] Create ```pkg1```, ```pkg2``` and ```pkg3``` image(s) if time permits
+* [x] Create ```pkg1```, ```pkg2``` image(s) if time permits
 
 * [ ] Finish all experiments and compile results
 

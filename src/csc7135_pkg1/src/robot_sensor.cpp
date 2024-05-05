@@ -24,6 +24,9 @@ FetchSensor::FetchSensor(){
  * @brief Simulate sending IMU data
 */
 void FetchSensor::publishHeadImuMessage(){
+    ROS_INFO("---------------------------");
+    ROS_INFO("FetchSensor: Sent IMU data");
+    ROS_INFO("---------------------------");
     sensor_msgs::Imu imu_msg;
     imu_msg.header.stamp = ros::Time::now();  // populate header stamp
     // Other values would have been populated here
@@ -51,6 +54,7 @@ FetchSensorBad::FetchSensorBad(){
     */
    std::cout<<"Sensors initalized"<<std::endl;
    // Setup publisher
+   // Sends wrong data type
    imu_pub = nh.advertise<sensor_msgs::Image>("/fetch/head_imu_data", 10);
 }
 
@@ -58,6 +62,9 @@ FetchSensorBad::FetchSensorBad(){
  * @brief Simulate sending IMU data
 */
 void FetchSensorBad::publishHeadImuMessage(){
+    std::cout << "---------------------------" << std::endl;
+    std::cout <<"FetchSensorBad: Sent IMU data"<<std::endl;
+    std::cout << "---------------------------" << std::endl;
     //sensor_msgs::Imu imu_msg;
     sensor_msgs::Image imu_msg; // Wrong type selected
     imu_msg.header.stamp = ros::Time::now();  // populate header stamp
