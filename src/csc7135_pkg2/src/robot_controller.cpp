@@ -16,21 +16,40 @@ FetchRobotController::FetchRobotController(){
     /**
      * Other relevant classes and arm controllers would be setup here
     */
-   
-   /**
-    * If the subscriber is inside the class Listener, 
-    * you can replace the last argument with the keyword this, 
-    * which means that the subscriber will refer to the class it is part of. 
-   */
-    sub_head_imu_ = nh.subscribe("/fetch/head_imu_data", 10, 
-                    &FetchRobotController::headImuCallback, this); // using sensor_msgs.Imu
+    target_obj = "Blue"; // Set default
+    // Setup subscribers
+    target_obj_sub_ = nh.subscribe("/fetch/target_obj", 10, 
+                    &FetchRobotController::targetObjCallback, this);
+    rgbd_sub_ = nh.subscribe("/fetch/rgbd_data", 10, 
+                    &FetchRobotController::rgbdCallback, this);
+    // Setup publishers
+    std::cout <<"FetchRobotController initialized\n"<<std::endl;
 }
+
 /**
- * @brief Simualtes receipt of orientation of robot's head
- * @attention This is the correct signature
+ * @brief
 */
-void FetchRobotController::headImuCallback(const sensor_msgs::Imu::ConstPtr& msg) {
-    ROS_INFO("Received Imu message with timestamp: %f", msg->header.stamp.toSec());
+void FetchRobotController::stateFeedBack(){
+    std::cout << "Timestamp: "<<rgbd_timestamp<<" target object: "<<target_obj<<"\n"<<std::endl;
+    // TODO collison warning
+}
+
+/**
+ * @brief Callback to receive information on target object
+ * @attention Get remapped to "/fetch/targets" instead of "/fetch/target_obj" 
+*/
+void FetchRobotController::targetObjCallback(const std_msgs::String::ConstPtr& msg){
+    target_obj = msg->data.c_str();
+    //ROS_INFO("Target object: [%s]", msg->data.c_str());
+}
+
+/**
+ * @brief Callback to receive RGBD image message
+*/
+void FetchRobotController::rgbdCallback(const sensor_msgs::Image::ConstPtr& img_msg){
+    std::ostringstream oss;
+    oss << img_msg->header.stamp.toSec();
+    rgbd_timestamp = oss.str(); // Record in global scope
 }
 
 /**

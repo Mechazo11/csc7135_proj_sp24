@@ -61,11 +61,11 @@ target_link_libraries(fetchcontroller_node
 )
 
 # FetchSensor node [bad]
-add_executable(fetchsensorbad_node 
-                src/fetchsensorbad_node.cpp
-                src/robot_sensor.cpp
+add_executable(fetchhardware_node 
+                src/fetchhardware_node.cpp
+                src/robot_hardware.cpp
 )
-target_link_libraries(fetchsensorbad_node
+target_link_libraries(fetchhardware_node
   ${catkin_LIBRARIES}
 )
 
@@ -74,7 +74,7 @@ target_link_libraries(fetchsensorbad_node
 #############
 
 install(
-  TARGETS fetchcontroller_node fetchsensorbad_node
+  TARGETS fetchcontroller_node fetchhardware_node
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
@@ -89,7 +89,7 @@ install(DIRECTORY include/${PROJECT_NAME}/
 )
 
 # Install launch files
-install(
-  DIRECTORY launch/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
-)
+# install(
+#   DIRECTORY launch/
+#   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
+# )
