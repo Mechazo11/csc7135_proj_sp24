@@ -17,12 +17,17 @@ This file contains all the commands required to running this project
 #### Create and test docker image
 
 * Navigate to the workspace: ```cd ~/csc7135_proj_sp24/```
+
 * Build ```pkg1``` docker image: ```sudo docker image build -t pkg1 .```
+
+
+* Build ```csc7135_proj``` docker image: ```sudo docker image build -t csc7135_proj .```
+
 * List Docker images: ```sudo docker image ls```
 * Delete all containers including its volume uses: ```docker rm -vf $(docker ps -aq)```
 * Delete all images: ```docker rmi -f $(docker images -aq)```
 
-* Test run this image: ```sudo docker run -it pkg1```
+* Test run this image: ```sudo docker run -it csc7135_proj```
 
 #### Experiment
 

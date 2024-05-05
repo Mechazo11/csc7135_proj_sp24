@@ -1,6 +1,0 @@
-fetch_teleop
-/home/az/csc7135_proj_sp24/devel/.private/fetch_teleop/cmake.lock /home/az/csc7135_proj_sp24/devel/./cmake.lock
-/home/az/csc7135_proj_sp24/devel/.private/fetch_teleop/share/fetch_teleop/cmake/fetch_teleopConfig.cmake /home/az/csc7135_proj_sp24/devel/share/fetch_teleop/cmake/fetch_teleopConfig.cmake
-/home/az/csc7135_proj_sp24/devel/.private/fetch_teleop/share/fetch_teleop/cmake/fetch_teleopConfig-version.cmake /home/az/csc7135_proj_sp24/devel/share/fetch_teleop/cmake/fetch_teleopConfig-version.cmake
-/home/az/csc7135_proj_sp24/devel/.private/fetch_teleop/lib/fetch_teleop/joystick_teleop /home/az/csc7135_proj_sp24/devel/lib/fetch_teleop/joystick_teleop
-/home/az/csc7135_proj_sp24/devel/.private/fetch_teleop/lib/pkgconfig/fetch_teleop.pc /home/az/csc7135_proj_sp24/devel/lib/pkgconfig/fetch_teleop.pc

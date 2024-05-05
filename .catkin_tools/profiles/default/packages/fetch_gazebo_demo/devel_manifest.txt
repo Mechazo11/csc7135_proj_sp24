@@ -1,5 +1,0 @@
-fetch_gazebo/fetch_gazebo_demo
-/home/az/csc7135_proj_sp24/devel/.private/fetch_gazebo_demo/cmake.lock /home/az/csc7135_proj_sp24/devel/./cmake.lock
-/home/az/csc7135_proj_sp24/devel/.private/fetch_gazebo_demo/share/fetch_gazebo_demo/cmake/fetch_gazebo_demoConfig-version.cmake /home/az/csc7135_proj_sp24/devel/share/fetch_gazebo_demo/cmake/fetch_gazebo_demoConfig-version.cmake
-/home/az/csc7135_proj_sp24/devel/.private/fetch_gazebo_demo/share/fetch_gazebo_demo/cmake/fetch_gazebo_demoConfig.cmake /home/az/csc7135_proj_sp24/devel/share/fetch_gazebo_demo/cmake/fetch_gazebo_demoConfig.cmake
-/home/az/csc7135_proj_sp24/devel/.private/fetch_gazebo_demo/lib/pkgconfig/fetch_gazebo_demo.pc /home/az/csc7135_proj_sp24/devel/lib/pkgconfig/fetch_gazebo_demo.pc

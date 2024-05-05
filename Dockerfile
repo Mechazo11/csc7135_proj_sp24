@@ -44,7 +44,7 @@ COPY startup-vnc.sh /
 WORKDIR /home/ros_ws
 
 # Set up the workspace and build your ROS packages
-RUN /bin/bash -c ". /opt/ros/noetic/setup.sh; catkin build csc7135_pkg1 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+RUN /bin/bash -c ". /opt/ros/noetic/setup.sh; catkin build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
 
 # Source the setup files for ROS
 RUN echo "source /opt/ros/noetic/setup.bash" >> /root/.bashrc && \
