@@ -26,7 +26,7 @@ FetchHardware::FetchHardware(){
    //nh.getParam("target_obj_", target_param_);
    
    // Setup publishers
-   rgbd_pub_ = nh.advertise<sensor_msgs::Imu>("/fetch/rgbd_data", 10);
+   rgbd_pub_ = nh.advertise<sensor_msgs::Image>("/fetch/rgbd_data", 10);
    target_obj_pub_ = nh.advertise<std_msgs::String>("/fetch/target_obj", 10); // Remmaped to "/fetch/targets"
    
    std::cout<<"Sensors initalized"<<std::endl;

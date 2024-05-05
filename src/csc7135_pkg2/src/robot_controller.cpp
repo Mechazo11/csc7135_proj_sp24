@@ -7,7 +7,7 @@
 */
 
 //* Includes
-#include "robot_controller.hpp"
+#include <robot_controller.hpp>
 
 /**
  * @brief Constructor
@@ -30,7 +30,10 @@ FetchRobotController::FetchRobotController(){
  * @brief
 */
 void FetchRobotController::stateFeedBack(){
-    std::cout << "Timestamp: "<<rgbd_timestamp<<" target object: "<<target_obj<<"\n"<<std::endl;
+    std::cout << std::fixed << std::setprecision(5);
+    std::cout << "Timestamp: " << rgbd_timestamp 
+              << " target object: " << target_obj << "\n" << std::endl;
+    // ROS_INFO("Timestamp: %s target object: %s\n", rgbd_timestamp.c_str(), target_obj.c_str());
     // TODO collison warning
 }
 
@@ -48,7 +51,7 @@ void FetchRobotController::targetObjCallback(const std_msgs::String::ConstPtr& m
 */
 void FetchRobotController::rgbdCallback(const sensor_msgs::Image::ConstPtr& img_msg){
     std::ostringstream oss;
-    oss << img_msg->header.stamp.toSec();
+    oss << img_msg->header.stamp;
     rgbd_timestamp = oss.str(); // Record in global scope
 }
 

@@ -1,14 +1,18 @@
 <launch>
     <!-- Launches good configuration for Experiment 1 -->
 
+    <!-- Launch the fetchhardware_node -->
+    <node name="fetchhardware_node" pkg="csc7135_pkg2" type="fetchhardware_node" output="screen" />
+    
+    <!-- Define parameter(s) -->
+    <param name="target_obj_" value="Red"/>
+
     <!-- Launch the fetchcontroller_node -->
     <!-- TODO remapping error here -->
     <node name="fetchcontroller_node" pkg="csc7135_pkg2" type="fetchcontroller_node" output="screen" />
 
     
-    <!-- Launch the fetchhardware_node -->
-    <node name="fetchhardware_node" pkg="csc7135_pkg2" type="fetchhardware_node" output="screen" />
-        <param name="target_obj_" value="Red"/>
-    </node>
+    
+    
 
 </launch>

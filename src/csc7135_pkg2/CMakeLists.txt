@@ -89,7 +89,7 @@ install(DIRECTORY include/${PROJECT_NAME}/
 )
 
 # Install launch files
-# install(
-#   DIRECTORY launch/
-#   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
-# )
+install(
+  DIRECTORY launch/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
+)
