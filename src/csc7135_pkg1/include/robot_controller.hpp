@@ -26,7 +26,6 @@ class FetchRobotController
         FetchRobotController(); // Constructor
         ~FetchRobotController();// Destructor
         void headImuCallback(const sensor_msgs::Imu::ConstPtr& msg); // Simulates IMU data sent from head
-        void headImuCallbackStr(const std_msgs::String::ConstPtr& msg); // Simulates IMU data as string
         // Variables
         ros::NodeHandle nh;
         // ros::Rate r;
