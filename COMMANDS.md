@@ -32,12 +32,17 @@ This file contains all the commands required to running this project
 
 * Move into the ```csc7135_rosdiscover_exp/scripts``` directory: ```cd ~/Documents/csc7135_rosdiscover_exp/scripts```
 
-* Activate ROSDiscover enviornment in az_ubunut: ```. /home/az/.local/share/virtualenvs/rosdiscover-2-DhvFio/bin/activate```
+* Activate ROSDiscover enviornment in az_ubunutu: ```. /home/az/.local/share/virtualenvs/rosdiscover-2-DhvFio/bin/activate```
 
 #### Experiment 1: Subscription to wrong data type
 
-* Step 1: Derive groundtruth architecture: ```python3 observe-system.py fetch_lsu```
-* Step 2: Check the architecture against ACME rules: ```python3 check-architecture.py observed fetch_lsu```
+* Step 1: Derive groundtruth architecture: ```python3 observe-system.py pkg1```
+* Step 2: Check the architecture against ACME rules: ```python3 check-architecture.py observed pkg1```
+
+#### Experiment 2: Subscription to wrong data type
+
+* Step 1: Derive groundtruth architecture: ```python3 observe-system.py pkg2```
+* Step 2: Check the architecture against ACME rules: ```python3 check-architecture.py observed pkg2```
 
 <!-- * Step 2: Run ROSDiscover to statically recover architecture: ```python3 recover-system.py recovery fetch_lsu``` -->
 
