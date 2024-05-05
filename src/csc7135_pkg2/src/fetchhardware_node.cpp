@@ -14,14 +14,14 @@
 int main(int argc, char **argv){
 
     // Set up the ROS node.
-    ros::init(argc, argv, "fetch_sensor"); // Initialize node with a name
+    ros::init(argc, argv, "fetch_hardware"); // Initialize node with a name
     FetchHardware hardware; // Erroneous class
-    ros::Rate rate(20); // 20 Hz update
+    ros::Rate rate(5); // 5 Hz update
     // Blocking
     while(ros::ok())
     {
-        hardware.publishRGBDData(); // Sends RGBD data from head  
-        hardware.publishTargetObjData();
+        hardware.publishRGBDData(); // Sends RGBD data
+        hardware.publishTargetObjData(); // Sends target to manipulate
         ros::spinOnce(); // Process callbacks
         rate.sleep();        
     }

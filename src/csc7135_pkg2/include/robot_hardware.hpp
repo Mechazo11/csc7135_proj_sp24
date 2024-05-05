@@ -33,11 +33,14 @@ class FetchHardware
         void publishRGBDData(); 
         // Simulate sending target object data based on user's requirement
         void publishTargetObjData();
+        void jointCallback(const sensor_msgs::JointState::ConstPtr& joint_msg); // Callback to process JointState command sent by FetchController
         
         // Variables
         ros::NodeHandle nh; 
         ros::Publisher rgbd_pub_;
         ros::Publisher target_obj_pub_;
+        ros::Publisher joint_state_pub_;
+        ros::Subscriber cmd_joint_sub_;
         std::string target_obj = ""; // Set to another name by user
 };
 

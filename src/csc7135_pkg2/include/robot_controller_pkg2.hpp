@@ -5,8 +5,8 @@
  * @date 05/05/2024
  * 
  */
-#ifndef ROBOT_CONTROLLER_HPP
-#define ROBOT_CONTROLLER_HPP
+#ifndef ROBOT_CONTROLLER_PKG2_HPP
+#define ROBOT_CONTROLLER_PKG2_HPP
 
 //* C/C++
 # include <iostream>
@@ -29,17 +29,19 @@ class FetchRobotController
         // Methods
         FetchRobotController(); // Constructor
         ~FetchRobotController();// Destructor
-        void stateFeedBack(); // Prints a summary of whats going on
+        void stateUpdate(); // TODO
 
-        // Simulates sending ACK for receving detected objects
-        void targetObjCallback(const std_msgs::String::ConstPtr& msg); 
+        void targetObjCallback(const std_msgs::String::ConstPtr& msg);  // Depricated
         void rgbdCallback(const sensor_msgs::Image::ConstPtr& img_msg);
+        void jointStateCallback(const sensor_msgs::JointState::ConstPtr& joint_msg);
 
         // Variables
         ros::NodeHandle nh;
         // ros::Rate r;
         ros::Subscriber target_obj_sub_;
         ros::Subscriber rgbd_sub_;
+        ros::Subscriber joint_state_sub;
+        ros::Publisher joint_cmd_pub_;
         std::string target_obj = "";
         std::string rgbd_timestamp = "";
 };

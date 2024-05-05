@@ -28,8 +28,30 @@ FetchHardware::FetchHardware(){
    // Setup publishers
    rgbd_pub_ = nh.advertise<sensor_msgs::Image>("/fetch/rgbd_data", 10);
    target_obj_pub_ = nh.advertise<std_msgs::String>("/fetch/target_obj", 10); // Remmaped to "/fetch/targets"
+   joint_state_pub_ = nh.advertise<sensor_msgs::JointState>("/fetch/joint_state", 10); 
+
+   // Setup subscribers
+   cmd_joint_sub_ = nh.subscribe("/fetch/cmd_joint", 10, 
+                    &FetchHardware::jointCallback, this);
    
-   std::cout<<"Sensors initalized"<<std::endl;
+   std::cout<<"FetchHardware initalized"<<std::endl;
+}
+
+/**
+ * @brief Callback to process JointState command sent by FetchController and send back feedback
+*/
+void FetchHardware::jointCallback(const sensor_msgs::JointState::ConstPtr& joint_msg){
+    /**
+     * Logic to convert joint commands to actuation on motors would have gone here
+    */
+    std::vector<std::string> joint_names = joint_msg->name;
+    std::cout <<"FetchHardware: received joint command data"<<std::endl;
+    /**
+     * Calls another class that interfaces with physical hardware
+    */
+    sensor_msgs::JointState joint_feedback_msg;
+    joint_feedback_msg.header.stamp = ros::Time::now();
+    joint_state_pub_.publish(joint_feedback_msg);
 }
 
 /**

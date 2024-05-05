@@ -6,7 +6,7 @@
 */
 
 // Includes
-#include "robot_controller.hpp"
+#include "robot_controller_pkg2.hpp"
 
 /**
  * Main entry point to this node
@@ -14,14 +14,14 @@
 int main(int argc, char **argv){
 
     // Set up the ROS node.
-    ros::init(argc, argv, "fetch_robot"); // Initialize node with a name
+    ros::init(argc, argv, "fetch_controller"); // Initialize node with a name
     FetchRobotController fetch_controller;
     ros::Rate rate(5); // 5 Hz update
     
     // Blocking
     while(ros::ok())
     {  
-        fetch_controller.stateFeedBack(); // Prints state of robot
+        fetch_controller.stateUpdate(); // Prints state of robot
         ros::spinOnce(); // Process callbacks
         rate.sleep();        
     }

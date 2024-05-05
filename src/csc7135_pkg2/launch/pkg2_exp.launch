@@ -9,7 +9,7 @@
     <param name="target_obj_" value="Red"/>
 
     <!-- Launch the fetchcontroller_node -->
-    <remap from="/fetch/target_obj" to="/fetch/targets" />
+    <!-- <remap from="/fetch/target_obj" to="/fetch/targets" /> -->
     <node name="fetchcontroller_node" pkg="csc7135_pkg2" type="fetchcontroller_node" output="screen" />
 
 </launch>

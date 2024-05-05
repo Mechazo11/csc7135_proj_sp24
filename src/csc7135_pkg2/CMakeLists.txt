@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.5.0)
 project(csc7135_pkg2)
 
 # Use cmake 14
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
