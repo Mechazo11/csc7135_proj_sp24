@@ -99,3 +99,5 @@ These ```simple``` projects is written to emulate architectural bugs in a Fetch 
 8. Using Class Methods as [callbacks](https://wiki.ros.org/roscpp_tutorials/Tutorials/UsingClassMethodsAsCallbacks)
 
 9. Usefulness of [Docker](https://medium.com/@sepideh.92sh/how-docker-revolutionizes-application-development-a-comprehensive-guide-for-beginners-fc2d3e53eb31)
+
+10. Remapping topic names in [ROS 1](https://roboticsbackend.com/ros-topic-remap-example/)
