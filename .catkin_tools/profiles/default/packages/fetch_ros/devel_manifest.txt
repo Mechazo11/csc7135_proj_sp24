@@ -1,2 +1,0 @@
-fetch_ros
-/home/az/csc7135_proj_sp24/devel/.private/fetch_ros/cmake.lock /home/az/csc7135_proj_sp24/devel/./cmake.lock

@@ -1,6 +1,0 @@
-fetch_ikfast_plugin
-/home/az/csc7135_proj_sp24/devel/.private/fetch_ikfast_plugin/cmake.lock /home/az/csc7135_proj_sp24/devel/./cmake.lock
-/home/az/csc7135_proj_sp24/devel/.private/fetch_ikfast_plugin/share/fetch_ikfast_plugin/cmake/fetch_ikfast_pluginConfig.cmake /home/az/csc7135_proj_sp24/devel/share/fetch_ikfast_plugin/cmake/fetch_ikfast_pluginConfig.cmake
-/home/az/csc7135_proj_sp24/devel/.private/fetch_ikfast_plugin/share/fetch_ikfast_plugin/cmake/fetch_ikfast_pluginConfig-version.cmake /home/az/csc7135_proj_sp24/devel/share/fetch_ikfast_plugin/cmake/fetch_ikfast_pluginConfig-version.cmake
-/home/az/csc7135_proj_sp24/devel/.private/fetch_ikfast_plugin/lib/libfetch_arm_moveit_ikfast_plugin.so /home/az/csc7135_proj_sp24/devel/lib/libfetch_arm_moveit_ikfast_plugin.so
-/home/az/csc7135_proj_sp24/devel/.private/fetch_ikfast_plugin/lib/pkgconfig/fetch_ikfast_plugin.pc /home/az/csc7135_proj_sp24/devel/lib/pkgconfig/fetch_ikfast_plugin.pc

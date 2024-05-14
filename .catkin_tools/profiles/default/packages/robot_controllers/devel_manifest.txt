@@ -1,6 +1,0 @@
-robot_controllers
-/home/az/csc7135_proj_sp24/devel/.private/robot_controllers/cmake.lock /home/az/csc7135_proj_sp24/devel/./cmake.lock
-/home/az/csc7135_proj_sp24/devel/.private/robot_controllers/share/robot_controllers/cmake/robot_controllersConfig-version.cmake /home/az/csc7135_proj_sp24/devel/share/robot_controllers/cmake/robot_controllersConfig-version.cmake
-/home/az/csc7135_proj_sp24/devel/.private/robot_controllers/share/robot_controllers/cmake/robot_controllersConfig.cmake /home/az/csc7135_proj_sp24/devel/share/robot_controllers/cmake/robot_controllersConfig.cmake
-/home/az/csc7135_proj_sp24/devel/.private/robot_controllers/lib/librobot_controllers.so /home/az/csc7135_proj_sp24/devel/lib/librobot_controllers.so
-/home/az/csc7135_proj_sp24/devel/.private/robot_controllers/lib/pkgconfig/robot_controllers.pc /home/az/csc7135_proj_sp24/devel/lib/pkgconfig/robot_controllers.pc

@@ -1,6 +1,0 @@
-fetch_depth_layer
-/home/az/csc7135_proj_sp24/devel/.private/fetch_depth_layer/cmake.lock /home/az/csc7135_proj_sp24/devel/./cmake.lock
-/home/az/csc7135_proj_sp24/devel/.private/fetch_depth_layer/share/fetch_depth_layer/cmake/fetch_depth_layerConfig-version.cmake /home/az/csc7135_proj_sp24/devel/share/fetch_depth_layer/cmake/fetch_depth_layerConfig-version.cmake
-/home/az/csc7135_proj_sp24/devel/.private/fetch_depth_layer/share/fetch_depth_layer/cmake/fetch_depth_layerConfig.cmake /home/az/csc7135_proj_sp24/devel/share/fetch_depth_layer/cmake/fetch_depth_layerConfig.cmake
-/home/az/csc7135_proj_sp24/devel/.private/fetch_depth_layer/lib/libfetch_depth_layer.so /home/az/csc7135_proj_sp24/devel/lib/libfetch_depth_layer.so
-/home/az/csc7135_proj_sp24/devel/.private/fetch_depth_layer/lib/pkgconfig/fetch_depth_layer.pc /home/az/csc7135_proj_sp24/devel/lib/pkgconfig/fetch_depth_layer.pc

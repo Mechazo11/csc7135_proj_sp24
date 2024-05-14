@@ -1,7 +1,0 @@
-fetch_calibration
-/home/az/csc7135_proj_sp24/devel/.private/fetch_calibration/cmake.lock /home/az/csc7135_proj_sp24/devel/./cmake.lock
-/home/az/csc7135_proj_sp24/devel/.private/fetch_calibration/share/fetch_calibration/cmake/fetch_calibrationConfig-version.cmake /home/az/csc7135_proj_sp24/devel/share/fetch_calibration/cmake/fetch_calibrationConfig-version.cmake
-/home/az/csc7135_proj_sp24/devel/.private/fetch_calibration/share/fetch_calibration/cmake/fetch_calibrationConfig.cmake /home/az/csc7135_proj_sp24/devel/share/fetch_calibration/cmake/fetch_calibrationConfig.cmake
-/home/az/csc7135_proj_sp24/devel/.private/fetch_calibration/bin/cmake.lock /home/az/csc7135_proj_sp24/devel/bin/cmake.lock
-/home/az/csc7135_proj_sp24/devel/.private/fetch_calibration/bin/calibrate_robot /home/az/csc7135_proj_sp24/devel/bin/calibrate_robot
-/home/az/csc7135_proj_sp24/devel/.private/fetch_calibration/lib/pkgconfig/fetch_calibration.pc /home/az/csc7135_proj_sp24/devel/lib/pkgconfig/fetch_calibration.pc

@@ -1,79 +1,80 @@
-### Project Readme
+# Architectural Bug Detection and Analysis in ROS-based Mobile Manipulator Projects Using ROSDiscover
 
-TODO
+This repository contains the ros workspace to emulate usage of ```ROSDiscover```, a static analysis tool that builds upon ROS 1's core API and ACME style rule checking to detect ```architectural bugs``` in two C++ ROS 1 packages that builds upon various topics and messages commonly used in mobile manipulator projects. ```ROSDiscover``` depends upon [ROSWire](https://github.com/cmu-rss-lab/roswire) packaged to read and interact with ROS Systems packaged as a ***Docker image***
 
-All commands used in this project is compiled in the ```COMMANDS.md``` text file
+Script used for this experiment can be found here [csc7135_rosdiscover_exp](https://github.com/Mechazo11/csc7135_rosdiscover_exp.git)
 
-Script files to use ```ROSDiscover``` based on experiment parameters are provided in the [csc7135_rosdiscover_exp](https://github.com/Mechazo11/csc7135_rosdiscover_exp.git) repository
+A copy of ```ROSDiscover``` paper and our report writeup is available in the ```report_papers``` directory.
 
-## Contributions
+References to some useful commands are compiled in the ```COMMANDS.md``` file
 
-* The Fetch gazebo package modified to work in ROS Noetic will be released as an open source project on May 5th. While ultimately not required to due to complexity and time constraint, it is still a worthwhile contribution that came out of this project.
+## Test equipment
 
-* Demonstrated usage of ROSDiscover`s capabilities on easy-to-use ROS systems to do a feasilibity analysis for it to be used for mobile manipulator systems.
+* Ubuntu 20.04 and ROS Noetic full desktop
+* Computer with Ryzen 5600X with 16Gb RAM
 
+## Setup
 
-## Tutorials/Useful references
-* [Fetch official tutorial for gazebo](https://docs.fetchrobotics.com/gazebo.html)
+* Install ```pipenv``` if you don't have it yet
 
+### ROSDiscover and ROSWire
 
-## Setting up ROSDiscover and ROSWire
-* git clone ROSDiscover
+* ```cd ~/Documents``` and git clone [rosdiscover](https://github.com/cmu-rss-lab/rosdiscover)
 * cd into ```rosdiscover``` and then git clone ```roswire```
-* Install ```rosdiscover``` and then cd into ```roswire``` and install it
-* Test installation ```rosdiscover --help```
+* cd back ino ```rosdiscover``` and activate the shell with ```pipenv shell```
+* Install ```rosdiscover``` with ```pip install -e .```. This may cause failure with ```roswire```.
+* Now cd into ```roswire``` and install it ```pip install roswire```
+* cd back to ```rosdiscover``` and test installation with ```rosdiscover --help```
 
-* Useful links
-    - https://medium.com/@sepideh.92sh/how-docker-revolutionizes-application-development-a-comprehensive-guide-for-beginners-fc2d3e53eb31
+* Intall the following dependencies in the host machine
+  * Docker for [Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and optionally complete [post-installation](https://docs.docker.com/engine/install/linux-postinstall/) steps
+  * Catkin build tools: ```https://catkin-tools.readthedocs.io/en/latest/installing.html```
+  * Java: ```sudo apt install default-jre```
 
+## Dataset overview
 
-## Experiment Setup
+Section 4 in the report details the experiment and dataset used. A brief summary of the two packages are as follows:
 
-### Creating Docker images
+* Pkg 1 Subscription to wrong data type: ```FetchSensor``` means to send IMU data but erroneous sends ***wrong data format***. This causes causes a run-time crash.
 
-In the workspace directory we have defined as ```Dockerfile``` that contains the instructions necessary for ```Docker```  to compose an image based  
+* Pkg 2 Danling connectors: The idea is, an user defines an object to be manupulated.
+```FetchRobotController``` receives image data and object detection data but does not send ```ACK``` to the ```FetchSensor```. Thus, ```FetchSensor``` keeps repeating the same data over and over again.
 
-### Running ROSDiscover
-These ```simple``` projects is written to emulate architectural bugs in a Fetch robot based on the detection library available in ```ROSDiscover```
+## Experimental Setup
+Before setting up the experiment, git clone [csc7135_rosdiscover_exp](https://github.com/Mechazo11/csc7135_rosdiscover_exp.git) into the ```/Documents``` directory
 
-```FetchRobotController``` class emulates logical functions that may be used with to control locomotion and manipulation of the Fetch robot
+### Step 1: Creating Docker image
 
-```FetchSensor``` is a class that emulates the vision sensor and arm joint states.
+* cd into csc7135_project ```cd ~```
+* git clone this repository: ```git clone https://github.com/Mechazo11/csc7135_proj_sp24```
+* cd into the directory: ```cd /csc7135_proj_sp24```
+* Initialize workspace: ```catkin init```
+* Run the convenience script to build and source the two test packages: ```./build_source_pkgs.sh```
+* Now build the Docker image: ```sudo docker image build -t csc7135_proj .```
+* Verify ```csc7135_proj``` image exsists: ```sudo docker image ls```
 
-* Packages and error dataset
-  * Pkg 1: ```FetchSensor``` sends IMU data but ```FetchRobotController``` subscribes to with wrong data format. RGB-D cameras like Zed2i can also compute orientation of camera along with vision. This experiment is to show if camera orientation is not recorded then calculating arm position will be wrong since the transformation of object observed from camera will not be accurate w.r.t to body frame which is a crucial step to eye-to-hand coordination problem.
+### Experiment 1: Subscription to wrong data type
 
-  * Pkg 2: Danling connector, ```FetchRobotController``` never starts selecting block even though it receives vision data.
+* Move into the ```csc7135_rosdiscover_exp/scripts``` directory: ```cd ~/Documents/csc7135_rosdiscover_exp/scripts```
 
-  * Pkg 3: Combination of both causing ```FetchRobotController``` to hit itself with its arm
+* Activate pipenv from ROSDiscover that you installed previously. An ***example*** command: ```. /home/az/.local/share/virtualenvs/rosdiscover-2-DhvFio/bin/activate``
+`
+* Step 1: Derive groundtruth architecture: ```python3 observe-system.py pkg1```
+* Step 2: Check the architecture against ACME rules: ```python3 check-architecture.py observed pkg1```
 
-## TODO
+#### Experiment 2: Dangling connectors
 
-* [ ] Create ```pkg1```, ```pkg2``` and ```pkg3``` image(s) if time permits
+* Step 1: Derive groundtruth architecture: ```python3 observe-system.py pkg2```
+* Step 2: Check the architecture against ACME rules: ```python3 check-architecture.py observed pkg2```
 
-* [ ] Finish all experiments and compile results
+#### Limitations:
 
-* [ ] Finish draft of report
+* We could not get the ```rosdiscover-cxx-recover``` to compile and run. 
+Hence Steps from RQ2 in the ROSDiscover paper, as described in ```README_ROSDISCOVER.rst``` file in [csc7135_rosdiscover_exp](https://github.com/Mechazo11/csc7135_rosdiscover_exp.git) does to not work.
 
-* [ ] Finish and submit final report
+* Thus, the experimental results only uses dynamic approach in recovering run time architecture which may have some limitations.
 
-* [ ] Make ```csc7135_proj_sp24```, ```csc7135_rosdiscover_exp``` and ```fetch_gazebo_noetic_ws``` repositories ***public***. 
-
-* [x] Complete csc7135_pkg1 with a C++ node and a launch file
-
-* [x] Write down the steps to replicate ```RQ2``` in ROSDiscover paper
-
-* [x] Correctly install ```ROSDiscover``` and ```ROSWire```
-
-* [x] Port ```fetch-gazebo``` and ```fetch``` into ROS Noetic
-
-* [x] Learn how to convert a catkin_ws to Docker image
-
-* [x] Test if ```rosdiscover``` launch works with the created Docker
-
-* [x] Check if we can understand the pipeline to get architecture read using rosdiscover
-
-* [x] Figure out how to launch Fetch with just is arm and no head. Not possible.s
+* If you are able to solve the ```rosdiscover-cxx-recover``` issue, please open a ```pull-request```.
 
 
 ## Resources / References
@@ -92,3 +93,7 @@ These ```simple``` projects is written to emulate architectural bugs in a Fetch 
 7. Publisher and subscriber in one [cpp class](https://answers.ros.org/question/59725/publishing-to-a-topic-via-subscriber-callback-function/?answer=59738?answer=59738#post-id-59738)
 
 8. Using Class Methods as [callbacks](https://wiki.ros.org/roscpp_tutorials/Tutorials/UsingClassMethodsAsCallbacks)
+
+9. Usefulness of [Docker](https://medium.com/@sepideh.92sh/how-docker-revolutionizes-application-development-a-comprehensive-guide-for-beginners-fc2d3e53eb31)
+
+10. Remapping topic names in [ROS 1](https://roboticsbackend.com/ros-topic-remap-example/)

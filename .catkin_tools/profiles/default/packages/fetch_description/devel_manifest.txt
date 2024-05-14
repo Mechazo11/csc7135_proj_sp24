@@ -1,5 +1,0 @@
-fetch_description
-/home/az/csc7135_proj_sp24/devel/.private/fetch_description/cmake.lock /home/az/csc7135_proj_sp24/devel/./cmake.lock
-/home/az/csc7135_proj_sp24/devel/.private/fetch_description/share/fetch_description/cmake/fetch_descriptionConfig.cmake /home/az/csc7135_proj_sp24/devel/share/fetch_description/cmake/fetch_descriptionConfig.cmake
-/home/az/csc7135_proj_sp24/devel/.private/fetch_description/share/fetch_description/cmake/fetch_descriptionConfig-version.cmake /home/az/csc7135_proj_sp24/devel/share/fetch_description/cmake/fetch_descriptionConfig-version.cmake
-/home/az/csc7135_proj_sp24/devel/.private/fetch_description/lib/pkgconfig/fetch_description.pc /home/az/csc7135_proj_sp24/devel/lib/pkgconfig/fetch_description.pc

@@ -1,5 +1,0 @@
-fetch_maps
-/home/az/csc7135_proj_sp24/devel/.private/fetch_maps/cmake.lock /home/az/csc7135_proj_sp24/devel/./cmake.lock
-/home/az/csc7135_proj_sp24/devel/.private/fetch_maps/share/fetch_maps/cmake/fetch_mapsConfig-version.cmake /home/az/csc7135_proj_sp24/devel/share/fetch_maps/cmake/fetch_mapsConfig-version.cmake
-/home/az/csc7135_proj_sp24/devel/.private/fetch_maps/share/fetch_maps/cmake/fetch_mapsConfig.cmake /home/az/csc7135_proj_sp24/devel/share/fetch_maps/cmake/fetch_mapsConfig.cmake
-/home/az/csc7135_proj_sp24/devel/.private/fetch_maps/lib/pkgconfig/fetch_maps.pc /home/az/csc7135_proj_sp24/devel/lib/pkgconfig/fetch_maps.pc

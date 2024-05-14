@@ -1,10 +1,10 @@
-/build/
-/devel/
-/logs/
-/.catkin_tools/
-/.vscode/
+build/*
+devel/*
+logs/*
+.catkin_tools/*
+.vscode/*
 *.docker
-.DS_Store
+*.DS_Store
 .dockerignore
 docker-compose.yml
 docker-compose.override.yml
