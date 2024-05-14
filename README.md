@@ -18,13 +18,13 @@ Script files to use ```ROSDiscover``` based on experiment parameters are provide
 
 
 ## Setting up ROSDiscover and ROSWire
-* git clone ROSDiscover
+
+* 
 * cd into ```rosdiscover``` and then git clone ```roswire```
 * Install ```rosdiscover``` and then cd into ```roswire``` and install it
 * Test installation ```rosdiscover --help```
 * Intall the following dependencies in the host machine
   * Java: ```sudo apt install default-jre```
-
 
 ## Experiment Setup
 
@@ -48,38 +48,6 @@ These ```simple``` projects is written to emulate architectural bugs in a Fetch 
 1
   * Pkg 2: Danling connector: The idea is user defines an object to be manupulated.
   ```FetchRobotController``` receives image data but does not send ```ACK``` to the ```FetchSensor```. Thus, ```FetchSensor``` keeps repeating the same data over and over again
-
-## TODO
-
-* [x] Look into the pick_place launcher to see if we can generate a ```red``` and a ```green``` object
-
-* [x] Create ```pkg1```, ```pkg2``` image(s) if time permits
-
-* [x] Finish all experiments and compile results
-
-* [ ] Finish draft of report
-
-* [ ] Finish and submit final report
-
-* [ ] Add replication instruction on how to download the two repositories and how to setup ROSDiscover
-
-* [ ] Delete Docker images from local machine to save space
-
-* [x] Complete csc7135_pkg1 with a C++ node and a launch file
-
-* [x] Write down the steps to replicate ```RQ2``` in ROSDiscover paper
-
-* [x] Correctly install ```ROSDiscover``` and ```ROSWire```
-
-* [x] Port ```fetch-gazebo``` and ```fetch``` into ROS Noetic
-
-* [x] Learn how to convert a catkin_ws to Docker image
-
-* [x] Test if ```rosdiscover``` launch works with the created Docker
-
-* [x] Check if we can understand the pipeline to get architecture read using rosdiscover
-
-* [x] Figure out how to launch Fetch with just is arm and no head. Not possible.s
 
 
 ## Resources / References
