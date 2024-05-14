@@ -8,9 +8,12 @@ A copy of ```ROSDiscover``` paper and our report writeup is available in the ```
 
 References to some useful commands are compiled in the ```COMMANDS.md``` file
 
-## Setup
+## Test equipment
 
-```ROSDiscover``` relies exclusively on ```Docker``` containers to evaluate a ROS package. Hence, the following
+* Ubuntu 20.04 and ROS Noetic full desktop
+* Computer with Ryzen 5600X with 16Gb RAM
+
+## Setup
 
 * Install ```pipenv``` if you don't have it yet
 
@@ -20,36 +23,58 @@ References to some useful commands are compiled in the ```COMMANDS.md``` file
 * cd into ```rosdiscover``` and then git clone ```roswire```
 * cd back ino ```rosdiscover``` and activate the shell with ```pipenv shell```
 * Install ```rosdiscover``` with ```pip install -e .```. This may cause failure with ```roswire```.
-* Now cd into ```roswire``` and install it 
+* Now cd into ```roswire``` and install it ```pip install roswire```
+* cd back to ```rosdiscover``` and test installation with ```rosdiscover --help```
 
-and then cd into ```roswire``` and install it. Oddly this procedure installs ```roswire``` correctly
-* cd back to ```rosdiscover``` and 
-* Test installation ```rosdiscover --help```
 * Intall the following dependencies in the host machine
+  * Docker for [Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and optionally complete [post-installation](https://docs.docker.com/engine/install/linux-postinstall/) steps
+  * Catkin build tools: ```https://catkin-tools.readthedocs.io/en/latest/installing.html```
   * Java: ```sudo apt install default-jre```
 
-## Experiment Setup
+## Dataset overview
 
-### Creating Docker images
+Section 4 in the report details the experiment and dataset used. A brief summary of the two packages are as follows:
 
-In the workspace directory we have defined as ```Dockerfile``` that contains the instructions necessary for ```Docker```  to compose an image based  
+* Pkg 1 Subscription to wrong data type: ```FetchSensor``` means to send IMU data but erroneous sends ***wrong data format***. This causes causes a run-time crash.
 
-### Running ROSDiscover
-These ```simple``` projects is written to emulate architectural bugs in a Fetch robot based on the detection library available in ```ROSDiscover```
+* Pkg 2 Danling connectors: The idea is, an user defines an object to be manupulated.
+```FetchRobotController``` receives image data and object detection data but does not send ```ACK``` to the ```FetchSensor```. Thus, ```FetchSensor``` keeps repeating the same data over and over again.
 
-```FetchRobotController``` class emulates logical functions that may be used with to control locomotion and manipulation of the Fetch robot
+## Experimental Setup
+Before setting up the experiment, git clone [csc7135_rosdiscover_exp](https://github.com/Mechazo11/csc7135_rosdiscover_exp.git) into the ```/Documents``` directory
 
-```FetchSensor``` is a class that emulates the vision sensor and arm joint states.
+### Step 1: Creating Docker image
 
+* cd into csc7135_project ```cd ~```
+* git clone this repository: ```git clone https://github.com/Mechazo11/csc7135_proj_sp24```
+* cd into the directory: ```cd /csc7135_proj_sp24```
+* Initialize workspace: ```catkin init```
+* Run the convenience script to build and source the two test packages: ```./build_source_pkgs.sh```
+* Now build the Docker image: ```sudo docker image build -t csc7135_proj .```
+* Verify ```csc7135_proj``` image exsists: ```sudo docker image ls```
 
-* Packages and error dataset
-  
-  RGB-D cameras like Zed2i can also compute orientation of camera along with vision. This experiment is to show if camera orientation is not recorded then calculating arm position will be wrong since the transformation of object observed from camera will not be accurate w.r.t to body frame which is a crucial step to eye-to-hand coordination problem.
-  
-  * Pkg 1: ```FetchSensor``` means to send IMU data but erroneous sends ***wrong data format***. This causes causes a run-time crash
-1
-  * Pkg 2: Danling connector: The idea is user defines an object to be manupulated.
-  ```FetchRobotController``` receives image data but does not send ```ACK``` to the ```FetchSensor```. Thus, ```FetchSensor``` keeps repeating the same data over and over again
+### Experiment 1: Subscription to wrong data type
+
+* Move into the ```csc7135_rosdiscover_exp/scripts``` directory: ```cd ~/Documents/csc7135_rosdiscover_exp/scripts```
+
+* Activate pipenv from ROSDiscover that you installed previously. An ***example*** command: ```. /home/az/.local/share/virtualenvs/rosdiscover-2-DhvFio/bin/activate``
+`
+* Step 1: Derive groundtruth architecture: ```python3 observe-system.py pkg1```
+* Step 2: Check the architecture against ACME rules: ```python3 check-architecture.py observed pkg1```
+
+#### Experiment 2: Dangling connectors
+
+* Step 1: Derive groundtruth architecture: ```python3 observe-system.py pkg2```
+* Step 2: Check the architecture against ACME rules: ```python3 check-architecture.py observed pkg2```
+
+#### Limitations:
+
+* We could not get the ```rosdiscover-cxx-recover``` to compile and run. 
+Hence Steps from RQ2 in the ROSDiscover paper, as described in ```README_ROSDISCOVER.rst``` file in [csc7135_rosdiscover_exp](https://github.com/Mechazo11/csc7135_rosdiscover_exp.git) does to not work.
+
+* Thus, the experimental results only uses dynamic approach in recovering run time architecture which may have some limitations.
+
+* If you are able to solve the ```rosdiscover-cxx-recover``` issue, please open a ```pull-request```.
 
 
 ## Resources / References
