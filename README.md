@@ -1,27 +1,29 @@
-### Project Readme
+# Architectural Bug Detection and Analysis in ROS-based Mobile Manipulator Projects Using ROSDiscover
 
-TODO
+This repository contains the ros workspace to emulate usage of ```ROSDiscover```, a static analysis tool that builds upon ROS 1's core API and ACME style rule checking to detect ```architectural bugs``` in two C++ ROS 1 packages that builds upon various topics and messages commonly used in mobile manipulator projects. ```ROSDiscover``` depends upon [ROSWire](https://github.com/cmu-rss-lab/roswire) packaged to read and interact with ROS Systems packaged as a ***Docker image***
 
-All commands used in this project is compiled in the ```COMMANDS.md``` text file
+Script used for this experiment can be found here [csc7135_rosdiscover_exp](https://github.com/Mechazo11/csc7135_rosdiscover_exp.git)
 
-Script files to use ```ROSDiscover``` based on experiment parameters are provided in the [csc7135_rosdiscover_exp](https://github.com/Mechazo11/csc7135_rosdiscover_exp.git) repository
+A copy of ```ROSDiscover``` paper and our report writeup is available in the ```report_papers``` directory.
 
-## Contributions
+References to some useful commands are compiled in the ```COMMANDS.md``` file
 
-* The Fetch gazebo package modified to work in ROS Noetic will be released as an open source project on May 5th. While ultimately not required to due to complexity and time constraint, it is still a worthwhile contribution that came out of this project.
+## Setup
 
-* Demonstrated usage of ROSDiscover`s capabilities on easy-to-use ROS systems to do a feasilibity analysis for it to be used for mobile manipulator systems.
+```ROSDiscover``` relies exclusively on ```Docker``` containers to evaluate a ROS package. Hence, the following
 
+* Install ```pipenv``` if you don't have it yet
 
-## Tutorials/Useful references
-* [Fetch official tutorial for gazebo](https://docs.fetchrobotics.com/gazebo.html)
+### ROSDiscover and ROSWire
 
-
-## Setting up ROSDiscover and ROSWire
-
-* 
+* ```cd ~/Documents``` and git clone [rosdiscover](https://github.com/cmu-rss-lab/rosdiscover)
 * cd into ```rosdiscover``` and then git clone ```roswire```
-* Install ```rosdiscover``` and then cd into ```roswire``` and install it
+* cd back ino ```rosdiscover``` and activate the shell with ```pipenv shell```
+* Install ```rosdiscover``` with ```pip install -e .```. This may cause failure with ```roswire```.
+* Now cd into ```roswire``` and install it 
+
+and then cd into ```roswire``` and install it. Oddly this procedure installs ```roswire``` correctly
+* cd back to ```rosdiscover``` and 
 * Test installation ```rosdiscover --help```
 * Intall the following dependencies in the host machine
   * Java: ```sudo apt install default-jre```
